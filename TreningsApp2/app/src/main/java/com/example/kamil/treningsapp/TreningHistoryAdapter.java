@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.kamil.treningsapp.Data.TreningData;
+
 import java.text.SimpleDateFormat;
 import java.util.List;
 

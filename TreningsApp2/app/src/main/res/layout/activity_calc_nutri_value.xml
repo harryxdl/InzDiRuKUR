@@ -32,15 +32,15 @@
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:text="Oblicz Zapotrzebowanie Kaloryczne" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_weight="0.24"
                 android:orientation="horizontal">
@@ -48,7 +48,7 @@
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Płeć"
                     tools:text="Płeć" />
 
@@ -87,7 +87,7 @@
                 <TextView
                     android:id="@+id/textAge"
                     android:layout_width="68dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Wiek" />
 
                 <EditText
@@ -101,7 +101,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_weight="0.24"
                 android:orientation="horizontal">
@@ -109,7 +109,7 @@
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="68dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Wzrost" />
 
                 <EditText
@@ -131,7 +131,7 @@
                 <TextView
                     android:id="@+id/Wzrost"
                     android:layout_width="64dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Waga" />
 
                 <EditText
@@ -153,7 +153,7 @@
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Aktywność fizyczna" />
 
                 <Spinner
@@ -173,7 +173,7 @@
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="123dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Planuję" />
 
                 <Spinner
@@ -191,29 +191,8 @@
                 android:onClick="calculate"
                 android:text="Oblicz" />
 
-            <LinearLayout
-                android:id="@+id/chart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.24"
-                android:orientation="horizontal"
-                android:visibility="visible"
-                android:weightSum="1">
 
-                <com.github.mikephil.charting.charts.PieChart
-                    android:id="@+id/idPieChart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                </com.github.mikephil.charting.charts.PieChart>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.24"
-                android:text="Zapotrzebowanie kaloryczne : 2500kcal" />
         </LinearLayout>
 
 

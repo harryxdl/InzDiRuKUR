@@ -57,7 +57,8 @@
         <activity android:name=".AddMeasure" />
         <activity android:name=".SingleFoodView" />
         <activity android:name=".FoodFinderActivity" />
-        <activity android:name=".AddFood"></activity>
+        <activity android:name=".AddFood" />
+        <activity android:name=".ShowNutriValueActivity"></activity>
     </application>
 
 </manifest>

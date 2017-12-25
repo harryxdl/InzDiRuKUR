@@ -1,14 +1,9 @@
 package com.example.kamil.treningsapp;
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +12,9 @@ import android.widget.ListView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
+
+import com.example.kamil.treningsapp.Data.DBHelper;
+import com.example.kamil.treningsapp.Data.FoodData;
 
 public class FoodFinderActivity extends AppCompatActivity {
 

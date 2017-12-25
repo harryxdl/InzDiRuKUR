@@ -17,6 +17,8 @@ package com.example.kamil.treningsapp;
         import android.widget.TextView;
         import android.view.View.OnClickListener;
 
+        import com.example.kamil.treningsapp.Data.FoodData;
+
 public class FoodListViewAdapter extends BaseAdapter {
 
     // Declare Variables

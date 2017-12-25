@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.kamil.treningsapp.Data.DBHelper;
+import com.example.kamil.treningsapp.Data.FoodData;
+
 public class AddFood extends AppCompatActivity {
 
     private EditText tbName, tbTag, tbCal, tbProtein, tbCarbo, tbFat;

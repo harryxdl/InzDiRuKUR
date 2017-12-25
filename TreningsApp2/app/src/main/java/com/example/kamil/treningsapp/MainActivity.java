@@ -1,13 +1,11 @@
 package com.example.kamil.treningsapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.kamil.treningsapp.Data.DBHelper;
+import com.example.kamil.treningsapp.Data.TreningData;
 
 import java.util.List;
 
@@ -27,9 +28,13 @@ public class MainActivity extends AppCompatActivity
     private Fragment fragment;
     private DBHelper dbHelper;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -44,6 +49,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        Boolean isFirtRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isfirstrun",true);
+        if(isFirtRun){
+            switchFragment( new CalcNutriValueActivity(),R.id.nav_calc, "Kalkulator");
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isfirstrun",false).commit();
+            ;
+            ;//
+        }
     }
 
     @Override
@@ -93,8 +105,18 @@ public class MainActivity extends AppCompatActivity
             switchFragment(new HistoryFragment().newInstance(dbHelper.getAllTrenings()), R.id.nav_history, "History");
 
         } else if (id == R.id.nav_calc) {
-           switchFragment( new CalcNutriValueActivity(),R.id.nav_calc, "Kalkulator");
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("edit", true);
+            CalcNutriValueActivity calcNutriValueActivity = new CalcNutriValueActivity();
+            calcNutriValueActivity.setArguments(bundle);
+            ft.replace(R.id.content_main,calcNutriValueActivity);
+            ft.commit();
+           //switchFragment( new CalcNutriValueActivity(),R.id.nav_calc, "Kalkulator");
         } else if (id == R.id.nav_measure) {
+
             switchFragment( new MeasureActivity(),R.id.nav_measure, "Measure");
         }
         else if (id == R.id. nav_product) {
@@ -127,4 +149,6 @@ public class MainActivity extends AppCompatActivity
     public List<TreningData> getAllTrenings(){
         return dbHelper.getAllTrenings();
     }
+
+
 }

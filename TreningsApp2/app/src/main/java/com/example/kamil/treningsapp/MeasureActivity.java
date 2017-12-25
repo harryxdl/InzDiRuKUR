@@ -20,6 +20,7 @@ import java.util.List;
 
 public class MeasureActivity extends Fragment {
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
