@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <TextView
+        android:id="@+id/MyTextView"
+        android:layout_width="273dp"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="350dp"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:text="@string/meters" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="85dp"
+        android:layout_height="100px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_marginTop="350dp" />
+
+    <Button
+        android:id="@+id/timerbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/timerTextView"
+        android:layout_alignRight="@+id/timerTextView"
+        android:layout_below="@+id/timerTextView"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="450dp"
+        android:text="Button" />
+
+</FrameLayout>

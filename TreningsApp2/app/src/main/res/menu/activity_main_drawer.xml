@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menu_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calc"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Oblicz Zapotrzebowanie Kaloryczne" />
+        <item
+            android:id="@+id/nav_measure"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Pomiar Ciała" />
+        <item
+            android:title="Treningi Biegowe">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_trening"
+                    android:icon="@drawable/ic_flag_black_24dp"
+                    android:title="Rozpocznij Trening" />
+                <item
+                    android:id="@+id/nav_history"
+                    android:icon="@drawable/ic_storage_black_24dp"
+                    android:title="Historia Treningów" />
+                </group>
+            </menu>
+        </item>
+    <item android:title="Planowanie odrzywiania">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Stwórz diete" />
+                <item
+                    android:id="@+id/nav_product"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Przegląd produktów" />
+            </group>
+        </menu>
+    </item>
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_arrow_back_black_24dp"
+                    android:title="Exit" />
+
+    </group>
+
+</menu>

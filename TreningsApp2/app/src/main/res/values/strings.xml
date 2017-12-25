@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">TreningsApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="start">Start Trening</string>
+    <string name="history">History</string>
+    <string name="info">Information</string>
+    <string name="info2">Information...</string>
+    <string name="end">Close APP</string>
+    <string name="datas">"Date Start: "</string>
+    <string name="meters">Your meters :</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_measure">MeasureActivity</string>
+
+    <string-array name="sportActivity">
+        <item>Znikoma(brak ćwiczeń)</item>
+        <item>Lekka(praca siedząca, ćwiczenia raz w tygodniu)</item>
+        <item>Średnia(ćwiczenia 2-3 razy w tygodniu)</item>
+        <item>Duża</item>
+        <item>Bardzo duża</item>
+    </string-array>
+
+    <string-array name="expectation">
+        <item>Chcę przytyć</item>
+        <item>Chcę utrzymać wagę</item>
+        <item>Chcę schudnąć</item>
+    </string-array>
+
+
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Filter ListView Tutorial</string>
+    <string name="foodId">"Id : "</string>
+    <string name="foodName">"Nazwa : "</string>
+    <string name="foodCal">"Kalorie : "</string>
+    <string name="foodFat">"Tłuszcz : "</string>
+    <string name="foodProtein">"Białko : "</string>
+    <string name="foodCarbo">"Węglowodany : "</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
