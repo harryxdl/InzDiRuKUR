@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/date_measure"
+                android:id="@+id/tbDate_measure"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -32,7 +32,7 @@
                 android:textColor="#ffffff" />
 
             <TextView
-                android:id="@+id/weight"
+                android:id="@+id/tbMeasureWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -42,7 +42,7 @@
                 android:textColor="#ffffff" />
 
             <TextView
-                android:id="@+id/waist"
+                android:id="@+id/tbMeasureWaist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -52,7 +52,7 @@
                 android:textColor="#ffffff" />
 
             <TextView
-                android:id="@+id/chest"
+                android:id="@+id/tbMeasureChest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -61,7 +61,7 @@
                 android:textColor="#ffffff" />
 
             <TextView
-                android:id="@+id/biceps"
+                android:id="@+id/tbMeasureBiceps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -70,7 +70,7 @@
                 android:textColor="#ffffff" />
 
             <TextView
-                android:id="@+id/thigh"
+                android:id="@+id/tbMeasureThigh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

@@ -12,8 +12,8 @@
         android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="4dp">
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="2dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
                 android:text="Waga" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/tbAddWeight"
                 android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -51,7 +51,7 @@
                 android:text="Talia" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/tbAddWaist"
                 android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -73,7 +73,7 @@
                 android:text="Klatka piersiowa" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/tbAddChest"
                 android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -96,7 +96,7 @@
                 android:text="Biceps" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/tbAddBiceps"
                 android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -119,7 +119,7 @@
                 android:text="Udo" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/tbAddThigh"
                 android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -135,7 +135,7 @@
             tools:layout_editor_absoluteY="8dp">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnAddMeasure"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"

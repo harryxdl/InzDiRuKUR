@@ -1,7 +1,6 @@
 package com.example.kamil.treningsapp;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,8 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.kamil.treningsapp.Data.DBHelper;
-import com.example.kamil.treningsapp.Data.TreningData;
+import com.example.kamil.treningsapp.DBData.DBHelper;
+import com.example.kamil.treningsapp.DBData.TreningData;
 
 import java.util.List;
 
@@ -99,8 +98,7 @@ public class MainActivity extends AppCompatActivity
             Intent mapsIntent = new Intent(this, MapsActivity.class);
             startActivity(mapsIntent); }
             else if (id == R.id.nav_measure) {
-                Intent addMeasure = new Intent(this, AddMeasure.class);
-                startActivity(addMeasure);
+            switchFragment( new MeasureFragment(),R.id.nav_measure, "Measure");
         } else if (id == R.id.nav_history) {
             switchFragment(new HistoryFragment().newInstance(dbHelper.getAllTrenings()), R.id.nav_history, "History");
 
@@ -117,7 +115,7 @@ public class MainActivity extends AppCompatActivity
            //switchFragment( new CalcNutriValueActivity(),R.id.nav_calc, "Kalkulator");
         } else if (id == R.id.nav_measure) {
 
-            switchFragment( new MeasureActivity(),R.id.nav_measure, "Measure");
+            switchFragment( new MeasureFragment(),R.id.nav_measure, "Measure");
         }
         else if (id == R.id. nav_product) {
             Intent intent = new Intent(this, FoodFinderActivity.class);

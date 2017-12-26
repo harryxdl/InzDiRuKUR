@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.kamil.treningsapp.Data.TreningData;
+import com.example.kamil.treningsapp.DBData.TreningData;
+import com.example.kamil.treningsapp.R;
 
 import java.text.SimpleDateFormat;
 import java.util.List;

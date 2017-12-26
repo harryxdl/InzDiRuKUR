@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp.Data;
+package com.example.kamil.treningsapp.DBData;
 
 import java.util.Date;
 import android.os.Parcel;

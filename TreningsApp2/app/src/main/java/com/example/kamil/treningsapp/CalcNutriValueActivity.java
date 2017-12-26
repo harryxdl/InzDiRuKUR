@@ -1,6 +1,5 @@
 package com.example.kamil.treningsapp;
 
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,16 +14,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-import com.example.kamil.treningsapp.Data.AppUserData;
-import com.example.kamil.treningsapp.Data.DBHelper;
+import com.example.kamil.treningsapp.DBData.AppUserData;
+import com.example.kamil.treningsapp.DBData.DBHelper;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CalcNutriValueActivity extends Fragment implements View.OnClickListener{
 

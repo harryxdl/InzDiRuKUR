@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.DBData;
 
 import android.os.Parcel;
 import android.os.Parcelable;

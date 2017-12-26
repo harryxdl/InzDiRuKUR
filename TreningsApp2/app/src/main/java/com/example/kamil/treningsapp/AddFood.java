@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.kamil.treningsapp.Data.DBHelper;
-import com.example.kamil.treningsapp.Data.FoodData;
+import com.example.kamil.treningsapp.DBData.DBHelper;
+import com.example.kamil.treningsapp.DBData.FoodData;
 
 public class AddFood extends AppCompatActivity {
 

@@ -12,7 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.kamil.treningsapp.Data.TreningData;
+import com.example.kamil.treningsapp.Adapter.TreningHistoryAdapter;
+import com.example.kamil.treningsapp.DBData.TreningData;
 
 import java.util.ArrayList;
 import java.util.List;

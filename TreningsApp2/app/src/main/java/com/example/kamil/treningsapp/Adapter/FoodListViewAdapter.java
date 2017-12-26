@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Adapter;
 
 /**
  * Created by Kamil on 15.12.2017.
@@ -17,7 +17,9 @@ package com.example.kamil.treningsapp;
         import android.widget.TextView;
         import android.view.View.OnClickListener;
 
-        import com.example.kamil.treningsapp.Data.FoodData;
+        import com.example.kamil.treningsapp.DBData.FoodData;
+        import com.example.kamil.treningsapp.R;
+        import com.example.kamil.treningsapp.SingleFoodView;
 
 public class FoodListViewAdapter extends BaseAdapter {
 

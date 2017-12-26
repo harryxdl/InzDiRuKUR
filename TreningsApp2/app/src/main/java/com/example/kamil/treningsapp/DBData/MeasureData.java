@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp.Data;
+package com.example.kamil.treningsapp.DBData;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -36,7 +36,7 @@ public class MeasureData implements Parcelable {
         this.chest = chest;
         this.date = date;
     }
-
+    public MeasureData(){}
     public int getiId() {
         return iId;
     }

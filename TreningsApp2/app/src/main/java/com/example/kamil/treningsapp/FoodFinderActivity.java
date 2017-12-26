@@ -13,8 +13,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 
-import com.example.kamil.treningsapp.Data.DBHelper;
-import com.example.kamil.treningsapp.Data.FoodData;
+import com.example.kamil.treningsapp.Adapter.FoodListViewAdapter;
+import com.example.kamil.treningsapp.DBData.DBHelper;
+import com.example.kamil.treningsapp.DBData.FoodData;
 
 public class FoodFinderActivity extends AppCompatActivity {
 

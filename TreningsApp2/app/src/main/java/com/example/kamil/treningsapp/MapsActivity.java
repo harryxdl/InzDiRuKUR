@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.kamil.treningsapp.Data.DBHelper;
-import com.example.kamil.treningsapp.Data.TreningData;
+import com.example.kamil.treningsapp.DBData.DBHelper;
+import com.example.kamil.treningsapp.DBData.TreningData;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
