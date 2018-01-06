@@ -1,6 +1,6 @@
 package com.example.kamil.treningsapp.Framgents.Days;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +14,10 @@ import com.example.kamil.treningsapp.R;
  */
 
 public class TabWedFragment extends Fragment {
+
+    public TabWedFragment() {
+        // Required empty public constructor
+    }
 
     @Nullable
     @Override

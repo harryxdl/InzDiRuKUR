@@ -18,6 +18,7 @@ import com.example.kamil.treningsapp.DBHelper;
 import com.example.kamil.treningsapp.Framgents.CalcNutriValueActivity;
 import com.example.kamil.treningsapp.Framgents.HistoryFragment;
 import com.example.kamil.treningsapp.Framgents.MeasureFragment;
+import com.example.kamil.treningsapp.Framgents.PlanDietManagerFragment;
 import com.example.kamil.treningsapp.Models.TreningData;
 import com.example.kamil.treningsapp.R;
 
@@ -120,6 +121,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_measure) {
 
             switchFragment( new MeasureFragment(),R.id.nav_measure, "Measure");
+        }
+        else if(id == R.id.nav_diet) {
+            switchFragment( new PlanDietManagerFragment(), R.id.nav_diet, "Diet");
         }
         else if (id == R.id. nav_product) {
             Intent intent = new Intent(this, FoodFinderActivity.class);
