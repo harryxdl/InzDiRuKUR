@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp.DBData;
+package com.example.kamil.treningsapp.Models;
 
 /**
  * Created by Kamil on 25.12.2017.

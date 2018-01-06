@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Framgents;
 
 import android.content.DialogInterface;
 import android.os.Parcelable;
@@ -13,7 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.kamil.treningsapp.Adapter.TreningHistoryAdapter;
-import com.example.kamil.treningsapp.DBData.TreningData;
+import com.example.kamil.treningsapp.Activity.MainActivity;
+import com.example.kamil.treningsapp.Models.TreningData;
+import com.example.kamil.treningsapp.R;
 
 import java.util.ArrayList;
 import java.util.List;

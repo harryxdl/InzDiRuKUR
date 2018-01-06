@@ -17,9 +17,9 @@ package com.example.kamil.treningsapp.Adapter;
         import android.widget.TextView;
         import android.view.View.OnClickListener;
 
-        import com.example.kamil.treningsapp.DBData.FoodData;
+        import com.example.kamil.treningsapp.Models.FoodData;
         import com.example.kamil.treningsapp.R;
-        import com.example.kamil.treningsapp.SingleFoodView;
+        import com.example.kamil.treningsapp.Activity.SingleFoodView;
 
 public class FoodListViewAdapter extends BaseAdapter {
 

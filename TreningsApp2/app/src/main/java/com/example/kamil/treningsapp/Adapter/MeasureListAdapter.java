@@ -1,17 +1,14 @@
 package com.example.kamil.treningsapp.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.kamil.treningsapp.DBData.FoodData;
-import com.example.kamil.treningsapp.DBData.MeasureData;
+import com.example.kamil.treningsapp.Models.MeasureData;
 import com.example.kamil.treningsapp.R;
-import com.example.kamil.treningsapp.SingleFoodView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

@@ -1,12 +1,18 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Framgents;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.kamil.treningsapp.R;
 
 
 /**
@@ -18,6 +24,13 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class PlanDietFragment extends Fragment {
+
+    private CoordinatorLayout coordinatorLayout;
+    //private User userData;
+    private AppBarLayout appBar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private View view;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +43,7 @@ public class PlanDietFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public PlanDietFragment() {
-        // Required empty public constructor
+
     }
 
     /**
@@ -64,7 +77,23 @@ public class PlanDietFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plan_diet, container, false);
+        view = inflater.inflate(R.layout.fragment_plan_diet, container, false);
+        viewPager = (ViewPager) view.findViewById(R.id.profilePager);
+
+        if (savedInstanceState == null) {
+            userData = getUserData();
+        } else {
+            userData = savedInstanceState.getParcelable(Constants.USER_STATE);
+        }
+        if(userData==null){
+            userData = new User();
+        }
+        initTabs(container);
+        toolbarViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
+        getActivity().setTitle(R.string.my_profile);
+        return view;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

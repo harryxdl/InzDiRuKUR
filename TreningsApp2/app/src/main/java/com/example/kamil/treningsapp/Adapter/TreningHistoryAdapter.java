@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.kamil.treningsapp.DBData.TreningData;
+import com.example.kamil.treningsapp.Models.TreningData;
 import com.example.kamil.treningsapp.R;
 
 import java.text.SimpleDateFormat;

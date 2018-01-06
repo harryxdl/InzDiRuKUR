@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Framgents;
 
 
 import android.graphics.Color;
@@ -8,8 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.kamil.treningsapp.DBData.AppUserData;
-import com.example.kamil.treningsapp.DBData.DBHelper;
+import com.example.kamil.treningsapp.Models.AppUserData;
+import com.example.kamil.treningsapp.DBHelper;
+import com.example.kamil.treningsapp.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;

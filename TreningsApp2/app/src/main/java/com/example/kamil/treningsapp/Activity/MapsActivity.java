@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Activity;
 
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -14,8 +14,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.kamil.treningsapp.DBData.DBHelper;
-import com.example.kamil.treningsapp.DBData.TreningData;
+import com.example.kamil.treningsapp.DBHelper;
+import com.example.kamil.treningsapp.Models.TreningData;
+import com.example.kamil.treningsapp.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;

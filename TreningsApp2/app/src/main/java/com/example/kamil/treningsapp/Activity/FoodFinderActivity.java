@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Activity;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -14,8 +14,10 @@ import android.text.TextWatcher;
 import android.view.Menu;
 
 import com.example.kamil.treningsapp.Adapter.FoodListViewAdapter;
-import com.example.kamil.treningsapp.DBData.DBHelper;
-import com.example.kamil.treningsapp.DBData.FoodData;
+import com.example.kamil.treningsapp.Framgents.AddFood;
+import com.example.kamil.treningsapp.DBHelper;
+import com.example.kamil.treningsapp.Models.FoodData;
+import com.example.kamil.treningsapp.R;
 
 public class FoodFinderActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.kamil.treningsapp.DBData.DBHelper;
-import com.example.kamil.treningsapp.DBData.TreningData;
+import com.example.kamil.treningsapp.DBHelper;
+import com.example.kamil.treningsapp.Framgents.CalcNutriValueActivity;
+import com.example.kamil.treningsapp.Framgents.HistoryFragment;
+import com.example.kamil.treningsapp.Framgents.MeasureFragment;
+import com.example.kamil.treningsapp.Models.TreningData;
+import com.example.kamil.treningsapp.R;
 
 import java.util.List;
 

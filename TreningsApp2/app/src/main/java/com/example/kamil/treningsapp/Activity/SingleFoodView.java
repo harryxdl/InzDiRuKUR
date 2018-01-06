@@ -1,9 +1,11 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.kamil.treningsapp.R;
 
 /**
  * Created by Kamil on 15.12.2017.

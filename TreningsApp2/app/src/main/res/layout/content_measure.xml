@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="50dp"
-    tools:context="com.example.kamil.treningsapp.HistoryFragment">
+    tools:context="com.example.kamil.treningsapp.Framgents.HistoryFragment">
 
 
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"

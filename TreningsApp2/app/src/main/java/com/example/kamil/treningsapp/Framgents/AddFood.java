@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Framgents;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.kamil.treningsapp.DBData.DBHelper;
-import com.example.kamil.treningsapp.DBData.FoodData;
+import com.example.kamil.treningsapp.Activity.FoodFinderActivity;
+import com.example.kamil.treningsapp.DBHelper;
+import com.example.kamil.treningsapp.Models.FoodData;
+import com.example.kamil.treningsapp.R;
 
 public class AddFood extends AppCompatActivity {
 

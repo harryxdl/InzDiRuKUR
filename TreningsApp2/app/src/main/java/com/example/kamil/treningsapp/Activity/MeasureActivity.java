@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp;
+package com.example.kamil.treningsapp.Activity;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.kamil.treningsapp.R;
 
 import java.util.ArrayList;
 import java.util.List;

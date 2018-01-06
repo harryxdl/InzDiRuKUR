@@ -1,4 +1,4 @@
-package com.example.kamil.treningsapp.DBData;
+package com.example.kamil.treningsapp;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.kamil.treningsapp.*;
+import com.example.kamil.treningsapp.Models.AppUserData;
+import com.example.kamil.treningsapp.Models.FoodData;
+import com.example.kamil.treningsapp.Models.MeasureData;
+import com.example.kamil.treningsapp.Models.TreningData;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
