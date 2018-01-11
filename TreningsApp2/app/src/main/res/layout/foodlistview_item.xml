@@ -4,18 +4,6 @@
     android:layout_height="fill_parent" >
 
     <TextView
-        android:id="@+id/foodIdlabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/foodId" />
-
-    <TextView
-        android:id="@+id/foodId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/foodIdlabel" />
-
-    <TextView
         android:id="@+id/foodNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

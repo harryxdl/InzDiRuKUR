@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.kamil.treningsapp.Models.AppUserData;
 import com.example.kamil.treningsapp.Models.FoodData;
+import com.example.kamil.treningsapp.Models.MealData;
 import com.example.kamil.treningsapp.Models.MeasureData;
 import com.example.kamil.treningsapp.Models.TreningData;
 
@@ -26,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public static final String DATABASE_NAME = "MyDBName.db";
 
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 9;
 
     public static final String TRENING_TABLE_NAME = "trenings";
     public static final String TRENING_COLUMN_ID = "id";
@@ -43,6 +44,13 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String FOOD_COLUMN_TAG = "tag";
     public static final String FOOD_COLUMN_FAT = "fat";
     public static final String FOOD_COLUMN_ENERGY = "energy_value";
+
+    public static final String DIET_TABLE_NAME = "diet";
+    public static final String DIET_COLUMN_ID = "id";
+    public static final String DIET_COLUMN_DAY = "day";
+    public static final String DIET_COLUMN_MEAL_NAME = "meal_name";
+    public static final String DIET_COLUMN_WEIGHT = "weight" ;
+    public static final String DIET_COLUMN_FOOD_ID = "food_id";
 
     public static final String USER_TABLE_NAME = "app_user";
     public static final String USER_COLUMN_ID = "id";
@@ -108,6 +116,15 @@ public class DBHelper extends SQLiteOpenHelper{
                         ")"
         );
         db.execSQL(
+                "create table " + DIET_TABLE_NAME +
+                        " (" + DIET_COLUMN_ID + " integer primary key," +
+                        DIET_COLUMN_DAY +" text, " +
+                        DIET_COLUMN_MEAL_NAME + " text, " +
+                        DIET_COLUMN_WEIGHT + " integer, " +
+                        DIET_COLUMN_FOOD_ID + " integer" +
+                        ")"
+        );
+        db.execSQL(
                   "create table " + BODY_TABLE_NAME +
                         " (" + BODY_COLUMN_ID + " integer primary key," +
                         BODY_COLUMN_WEIGHT + " real, " +
@@ -124,6 +141,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TRENING_TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + USER_TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + DIET_TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + FOOD_TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + BODY_TABLE_NAME);
         onCreate(db);
@@ -221,6 +239,55 @@ public class DBHelper extends SQLiteOpenHelper{
         }
         return treninglist;
     }
+    ///////////////////////////////////////////////////////////////////////////////
+    // DIET
+    public List<FoodData> mealList(String day, String mealName) {
+        List<FoodData> foodList = new ArrayList<FoodData>();
+        String selectQuery = "SELECT  * FROM " + DIET_TABLE_NAME + " where day='" + day + "' and meal_name='" + mealName + "'" ;//;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                FoodData food = getFood(Integer.parseInt(cursor.getString(4)));
+
+                foodList.add(food);
+
+            } while (cursor.moveToNext());
+        }
+        return foodList;
+    }
+    public List<MealData> getMealList(String day, String mealName) {
+        List<MealData> mealList = new ArrayList<MealData>();
+        String selectQuery = "SELECT  * FROM " + DIET_TABLE_NAME + " where day='" + day + "' and meal_name='" + mealName + "'" ;//;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                FoodData food = getFood(Integer.parseInt(cursor.getString(4)));
+                MealData meal = new MealData(cursor.getString(1), cursor.getString(2),Integer.parseInt(cursor.getString(3)),
+                        Integer.parseInt(cursor.getString(4)),food.getName(),food.getTag(),food.getEnergy(),food.getProtein(),
+                        food.getCarbo(),food.getFat());
+                mealList.add(meal);
+
+            } while (cursor.moveToNext());
+        }
+        return mealList;
+    }
+    public void addMeal(String day, String mealName,int weight, int foodId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(DIET_COLUMN_DAY, day);
+        values.put(DIET_COLUMN_MEAL_NAME, mealName);
+        values.put(DIET_COLUMN_WEIGHT, weight);
+        values.put(DIET_COLUMN_FOOD_ID, foodId);
+        db.insert(DIET_TABLE_NAME, null, values);
+        db.close(); // Closing database connection
+    }
+    ///////////////////////////////////////////////////////////////////////////////
+    // FOOOOOOOOOOOOOOOOOOOOOD
     // Getting All food
     public List<FoodData> getFoodList() {
         List<FoodData> foodList = new ArrayList<FoodData>();
@@ -243,6 +310,25 @@ public class DBHelper extends SQLiteOpenHelper{
             } while (cursor.moveToNext());
         }
         return foodList;
+    }
+    public FoodData getFood(int id) {
+        FoodData food = new FoodData();
+        String selectQuery = "SELECT  * FROM " + FOOD_TABLE_NAME + " where id=" +id ;//;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                food.setiId(Integer.parseInt(cursor.getString(0)));
+                food.setName(cursor.getString(1));
+                food.setTag(cursor.getString(2));
+                food.setProtein(Integer.parseInt(cursor.getString(3)));
+                food.setCarbo(Integer.parseInt(cursor.getString(4)));
+                food.setFat(Integer.parseInt(cursor.getString(5)));
+                food.setEnergy(Integer.parseInt(cursor.getString(6)));
+
+            } while (cursor.moveToNext());
+        }
+        return food;
     }
     // Getting treining Count
     public int getTreningsCount() {

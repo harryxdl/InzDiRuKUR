@@ -49,10 +49,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.kamil.treningsapp.Activity.MainActivity" />
         </activity>
-        <activity
-            android:name=".Activity.MeasureActivity"
-            android:label="@string/title_activity_measure"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Framgents.CalcNutriValueActivity" />
         <activity android:name=".Framgents.AddMeasure" />
         <activity android:name=".Activity.SingleFoodView" />

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="195dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.92"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:textColor="@android:color/white"
+        android:textSize="16dp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/AddMealFood"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_gravity="right|end"
+        android:text="Dodaj produkt"
+        android:visibility="visible" />
+
+</LinearLayout>

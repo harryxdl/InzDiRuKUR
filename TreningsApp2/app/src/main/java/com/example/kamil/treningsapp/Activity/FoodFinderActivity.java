@@ -33,13 +33,23 @@ public class FoodFinderActivity extends AppCompatActivity {
     int[] proteints;
     int[] carbos;
     int[] fats;
-
+    boolean fromDiet = false;
+    String day;
+    String mealName;
     ArrayList<FoodData> arraylist = new ArrayList<FoodData>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            Intent intent = getIntent();
+            mealName = intent.getStringExtra("mealName");
+            day = intent.getStringExtra("day");
+            fromDiet = intent.getBooleanExtra("planDiet", false);
+        }
+        catch(Exception ex){
 
+        }
         setContentView(R.layout.foodlistview_main);
         DBHelper db = new DBHelper(this);
         // Generate sample data
@@ -73,7 +83,7 @@ public class FoodFinderActivity extends AppCompatActivity {
         }
 
         // Pass results to FoodListViewAdapter Class
-        adapter = new FoodListViewAdapter(this, db.getFoodList());
+        adapter = new FoodListViewAdapter(this, db.getFoodList(), day, mealName, fromDiet);
 
         // Binds the Adapter to the ListView
         list.setAdapter(adapter);

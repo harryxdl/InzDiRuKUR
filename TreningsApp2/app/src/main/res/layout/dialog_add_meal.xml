@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/lbAddMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Dodaj posiłek "
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="196dp"
+        android:layout_height="91dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/foodNameLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/foodName" />
+
+        <TextView
+            android:id="@+id/foodName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/foodNameLabel2" />
+
+        <TextView
+            android:id="@+id/foodCalLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodNameLabel2"
+            android:text="@string/foodCal" />
+
+        <TextView
+            android:id="@+id/foodCal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodName2"
+            android:layout_toRightOf="@+id/foodCalLabel2" />
+
+        <TextView
+            android:id="@+id/foodProteinLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodCalLabel2"
+            android:text="@string/foodProtein" />
+
+        <TextView
+            android:id="@+id/foodProtein2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodCal2"
+            android:layout_toRightOf="@+id/foodProteinLabel2" />
+
+        <TextView
+            android:id="@+id/foodCarboLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodProtein2"
+            android:text="@string/foodCarbo" />
+
+        <TextView
+            android:id="@+id/foodCarbo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodProteinLabel2"
+            android:layout_toRightOf="@+id/foodCarboLabel2" />
+
+        <TextView
+            android:id="@+id/foodFatLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodCarboLabel2"
+            android:text="@string/foodFat" />
+
+        <TextView
+            android:id="@+id/foodFat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodCarbo2"
+            android:layout_toRightOf="@+id/foodFatLabel2" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Waga w gramach" />
+
+    <EditText
+        android:id="@+id/foodWeight2"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnAddMeal"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Dodaj" />
+</LinearLayout>

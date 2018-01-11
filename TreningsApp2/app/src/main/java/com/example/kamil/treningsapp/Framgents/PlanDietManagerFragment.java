@@ -20,6 +20,8 @@ import com.example.kamil.treningsapp.Framgents.Days.TabTueFragment;
 import com.example.kamil.treningsapp.Framgents.Days.TabWedFragment;
 import com.example.kamil.treningsapp.R;
 
+import java.util.Calendar;
+
 /**
  * Created by szymon.piszczatowski on 06.01.2018.
  */
@@ -64,8 +66,40 @@ public class PlanDietManagerFragment extends Fragment {
         adapter.addFragment(new TabFriFragment(), "Pt");
         adapter.addFragment(new TabSunFragment(), "Sob");
         adapter.addFragment(new TabSatFragment(), "Nie");
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        int iDay = 0 ;
+        switch (day) {
+            case Calendar.SUNDAY:
+                iDay = 6;
+                break;
+            case Calendar.MONDAY:
+                iDay = 0;
+                break;
 
+            case Calendar.WEDNESDAY:
+                iDay = 1;
+                break;
+            case Calendar.TUESDAY:
+                iDay = 2;
+                break;
+
+            case Calendar.THURSDAY:
+                iDay = 3;
+                break;
+
+            case Calendar.FRIDAY:
+                iDay = 4;
+                break;
+
+            case Calendar.SATURDAY:
+                iDay = 5;
+                break;
+
+
+        }
         viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(iDay,true);
     }
 
     @Override
