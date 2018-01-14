@@ -53,8 +53,8 @@ public class SingleFoodView extends Activity {
         txtid.setText(Integer.toString(iId));
         txtname.setText(name);
         txtcal.setText(Integer.toString(energy));
-        txtcarbo.setText(Integer.toString(carbo));
-        txtfat.setText(Integer.toString(fat));
-        txtprotein.setText(Integer.toString(protein));
+        txtcarbo.setText(Double.toString(carbo));
+        txtfat.setText(Double.toString(fat));
+        txtprotein.setText(Double.toString(protein));
     }
 }

@@ -61,9 +61,9 @@ public class FoodFinderActivity extends AppCompatActivity {
                 "owoce", "owoce", "owoce", "mięso", "mięso",
                 "fastfood", "fastfood"};
         calories = new int[]{100,200,322,444,555,677,733,822,922,103};
-        proteints = new int[]{100,200,322,444,555,677,733,822,922,103};
-        carbos = new int[]{100,200,322,444,555,677,733,822,922,103};
-        fats = new int[]{100,200,322,444,555,677,733,822,922,103};
+//        proteints = new int[]{100,200,322,444,555,677,733,822,922,103};
+//        carbos = new int[]{100,200,322,444,555,677,733,822,922,103};
+//        fats = new int[]{100,200,322,444,555,677,733,822,922,103};
         // Locate the ListView in listview_main.xml
         list = (ListView) findViewById(R.id.listview);
         btn = (Button) findViewById(R.id.button2);
@@ -75,12 +75,12 @@ public class FoodFinderActivity extends AppCompatActivity {
                 Intent intent = new Intent(FoodFinderActivity.this, AddFood.class);
                 startActivity(intent);
             }
-        });
-        for (int i = 0; i < ids.length; i++) {
-            FoodData food = new FoodData(names[i], tags[i], calories[i],
-                    proteints[i], carbos[i],fats[i]);
-            db.addFood(food);
-        }
+    });
+//        for (int i = 0; i < ids.length; i++) {
+//            FoodData food = new FoodData(names[i], tags[i], calories[i],
+//                    proteints[i], carbos[i],fats[i]);
+//            db.addFood(food);
+//        }
 
         // Pass results to FoodListViewAdapter Class
         adapter = new FoodListViewAdapter(this, db.getFoodList(), day, mealName, fromDiet);

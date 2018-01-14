@@ -98,9 +98,9 @@ public class FoodListViewAdapter extends BaseAdapter {
         //holder.id.setText(Integer.toString(foodList.get(position).getiId()));
         holder.name.setText(foodList.get(position).getName());
         holder.cal.setText(Integer.toString(foodList.get(position).getEnergy()));
-        holder.protein.setText(Integer.toString(foodList.get(position).getProtein()));
-        holder.carbo.setText(Integer.toString(foodList.get(position).getCarbo()));
-        holder.fat.setText(Integer.toString(foodList.get(position).getFat()));
+        holder.protein.setText(Double.toString(foodList.get(position).getProtein()));
+        holder.carbo.setText(Double.toString(foodList.get(position).getCarbo()));
+        holder.fat.setText(Double.toString(foodList.get(position).getFat()));
 
         // Listen for ListView Item Click
         view.setOnClickListener(new OnClickListener() {
@@ -136,9 +136,9 @@ public class FoodListViewAdapter extends BaseAdapter {
 
                     dialogHolder.name.setText(foodList.get(position).getName());
                     dialogHolder.cal.setText(Integer.toString(foodList.get(position).getEnergy()));
-                    dialogHolder.protein.setText(Integer.toString(foodList.get(position).getProtein()));
-                    dialogHolder.carbo.setText(Integer.toString(foodList.get(position).getCarbo()));
-                    dialogHolder.fat.setText(Integer.toString(foodList.get(position).getFat()));
+                    dialogHolder.protein.setText(Double.toString(foodList.get(position).getProtein()));
+                    dialogHolder.carbo.setText(Double.toString(foodList.get(position).getCarbo()));
+                    dialogHolder.fat.setText(Double.toString(foodList.get(position).getFat()));
                     dialog.show();
 
                     btnSave.setOnClickListener(new View.OnClickListener(){

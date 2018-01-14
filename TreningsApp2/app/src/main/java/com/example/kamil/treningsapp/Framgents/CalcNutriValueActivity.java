@@ -1,5 +1,6 @@
 package com.example.kamil.treningsapp.Framgents;
 
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -18,6 +19,8 @@ import com.example.kamil.treningsapp.Models.AppUserData;
 import com.example.kamil.treningsapp.DBHelper;
 import com.example.kamil.treningsapp.R;
 import com.github.mikephil.charting.charts.PieChart;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class CalcNutriValueActivity extends Fragment implements View.OnClickListener{
 
@@ -47,6 +50,9 @@ public class CalcNutriValueActivity extends Fragment implements View.OnClickList
         {
 
         }
+        Boolean isFirtRun = getContext().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun",true);
+        if(isFirtRun)
+            dbHelper.addProducts();
         if(bundle!=null)
             edit = bundle.getBoolean("edit");
         else

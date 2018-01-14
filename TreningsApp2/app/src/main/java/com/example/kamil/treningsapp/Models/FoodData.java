@@ -9,16 +9,16 @@ public class FoodData {
     String name;
     String tag;
     int energy;
-    int protein;
-    int carbo;
-    int fat;
+    double protein;
+    double carbo;
+    double fat;
 
     public FoodData()
     {
 
     }
 
-    public FoodData(String name, String tag, int energy, int protein, int carbo, int fat) {
+    public FoodData(String name, String tag, int energy, double protein, double carbo, double fat) {
         this.name = name;
         this.tag = tag;
         this.energy = energy;
@@ -27,7 +27,7 @@ public class FoodData {
         this.fat = fat;
     }
 
-    public FoodData(int iId, String name, int energy, int protein, int carbo, int fat) {
+    public FoodData(int iId, String name, int energy, double protein, double carbo, double fat) {
         this.iId = iId;
         this.name = name;
         this.energy = energy;
@@ -60,27 +60,27 @@ public class FoodData {
         this.energy = energy;
     }
 
-    public int getProtein() {
+    public double getProtein() {
         return protein;
     }
 
-    public void setProtein(int protein) {
+    public void setProtein(double protein) {
         this.protein = protein;
     }
 
-    public int getCarbo() {
+    public double getCarbo() {
         return carbo;
     }
 
-    public void setCarbo(int carbo) {
+    public void setCarbo(double carbo) {
         this.carbo = carbo;
     }
 
-    public int getFat() {
+    public double getFat() {
         return fat;
     }
 
-    public void setFat(int fat) {
+    public void setFat(double fat) {
         this.fat = fat;
     }
 

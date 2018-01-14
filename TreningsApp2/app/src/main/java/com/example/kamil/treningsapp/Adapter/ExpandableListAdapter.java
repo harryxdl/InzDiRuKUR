@@ -109,7 +109,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
         final String headerTitle = (String)getGroup(i);
         final String childText = "Nazwa " + getChild(i,i1).getName().toString();
-        final String childText2 = "Kalorie " + Integer.toString(getChild(i,i1).getEnergy());
+        int kalorie = (getChild(i,i1).getEnergy()*getChild(i,i1).getWeight())/100;
+        final String childText2 = "Kalorie " + Integer.toString(kalorie);
         final String childText3 =  "Waga " + Integer.toString(getChild(i,i1).getWeight());
         if(view == null)
         {

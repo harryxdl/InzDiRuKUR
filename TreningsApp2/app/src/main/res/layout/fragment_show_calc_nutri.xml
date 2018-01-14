@@ -5,27 +5,79 @@
     tools:context="com.example.kamil.treningsapp.Framgents.ShowCalcNutri">
 
     <LinearLayout
-        android:id="@+id/chart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.24"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        android:weightSum="1">
+        android:orientation="vertical">
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/idPieChart"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:text="Wyliczone zapotorzebowanie:"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tbxEnergy_Value"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:text="Kalorie:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tbxProtein_Value"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:text="Kalorie:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tbxCarbo_Value"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:text="Kalorie:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tbxFat_Value"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:text="Kalorie:"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        </com.github.mikephil.charting.charts.PieChart>
+            <LinearLayout
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.24"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/idPieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="326dp">
+
+                </com.github.mikephil.charting.charts.PieChart>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tbxEnergy_Value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.24"
-        android:text="Zapotrzebowanie kaloryczne : 2500kcal" />
 
 </FrameLayout>

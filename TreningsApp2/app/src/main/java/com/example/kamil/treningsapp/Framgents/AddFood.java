@@ -39,9 +39,9 @@ public class AddFood extends AppCompatActivity {
                 food.setName(tbName.getText().toString());
                 food.setTag(tbTag.getText().toString());
                 food.setEnergy(Integer.parseInt(tbCal.getText().toString()));
-                food.setProtein(Integer.parseInt(tbProtein.getText().toString()));
-                food.setCarbo(Integer.parseInt(tbCarbo.getText().toString()));
-                food.setFat(Integer.parseInt(tbFat.getText().toString()));
+                food.setProtein(Double.parseDouble(tbProtein.getText().toString()));
+                food.setCarbo(Double.parseDouble(tbCarbo.getText().toString()));
+                food.setFat(Double.parseDouble(tbFat.getText().toString()));
 
                 db.addFood(food);
 

@@ -49,7 +49,8 @@ public class TabMonFragment extends Fragment {
     private List<String> listDataHeader;
     private HashMap<String,List<MealData>> listHash;
     private DBHelper dbhelper;
-    private int cal,carbo,fat,protein;
+    private double carbo,fat,protein;
+    private int cal;
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
@@ -70,7 +71,8 @@ public class TabMonFragment extends Fragment {
         listView = (ExpandableListView)view.findViewById(R.id.lvlExpMon);
         AppUserData appUser = dbhelper.getUser(1);
         holder = new ViewHolder() ;
-        cal = fat = protein = carbo = 0;
+        fat = protein = carbo = 0;
+        cal = 0;
        // adddata();
         holder.cal = (TextView) view.findViewById(R.id.foodCal3);
         holder.protein = (TextView) view.findViewById(R.id.foodProtein3);
@@ -88,9 +90,9 @@ public class TabMonFragment extends Fragment {
 
     private void setTxt() {
         holder.cal.setText(Integer.toString(cal));
-        holder.protein.setText(Integer.toString(protein));
-        holder.carbo.setText(Integer.toString(carbo));
-        holder.fat.setText(Integer.toString(fat));
+        holder.protein.setText(Double.toString(protein));
+        holder.carbo.setText(Double.toString(carbo));
+        holder.fat.setText(Double.toString(fat));
 
     }
 

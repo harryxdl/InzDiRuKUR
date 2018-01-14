@@ -53,13 +53,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        Boolean isFirtRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isfirstrun",true);
-        if(isFirtRun){
+        Boolean isFirtRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun",true);
+        if(isFirtRun)
             switchFragment( new CalcNutriValueActivity(),R.id.nav_calc, "Kalkulator");
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isfirstrun",false).commit();
-            ;
-            ;//
-        }
     }
 
     @Override

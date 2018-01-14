@@ -1,0 +1,322 @@
+Ananas,owoce,54,13.6,0.4,0.2
+Ananas. plastry w syropie,owoce,84,21,0.4,0.1
+Ananasy. dżem niskosłodzony,owoce,157,38.6,0.2,0.1
+Arbuz,owoce,36,8.4,0.6,0.1
+Awokado,owoce,160,7.4,2,15.3
+Babka biszkoptowa,słodycze,340,67.1,8.2,4.3
+Bagietki francuskie,pieczywo,282,60.1,7.9,1.7
+Bakłażan,warzywa,21,6.3,1.1,0.1
+Baleron gotowany,mięso,244,0.9,15.1,20.2
+Banan,owoce,95,23.5,1,0.3
+Baranina. łopatka,mięso,284,0,15.6,25
+Baranina. udziec,mięso,232,0,18,18
+Barszcz czerwony zabielany,dania,32,3.3,2,1.4
+Barszcz ukraiński,dania,54,6.5,2.1,2.7
+Barszcz ukraiński mrożony,dania,28,7.1,1.6,0.2
+Barszcz z boćwiną,dania,29,2.5,1.5,1.7
+Baton Bounty,słodycze,448,56.7,4.2,25.2
+Baton Mars,słodycze,451,68.9,3.6,18.2
+Baton Milky Way,słodycze,448,71.8,3.6,16.2
+Baton Snickers,słodycze,497,52.6,9.7,28.9
+Baton szynkowy z indyka,słodycze,143,0.1,14.9,9.3
+Baton Twix,słodycze,483,64.2,5.3,23.2
+Baton z kurczaka,słodycze,144,0.1,16.7,8.6
+Befsztyk bity wiejski,mięso,258,1.6,19.4,19.6
+Białko jaja kurzego,jajka,49,0.7,10.9,0.2
+Bigos,dania,119,3.9,5.1,9.9
+Bitki wieprzowe,dania,195,2.6,10.4,16.1
+Bitki wieprzowe w jarzynach,dania,198,4.3,10.7,16
+Bitki wołowe,dania,102,2.4,13.6,4.3
+Bitki wołowe w jarzynach,dania,116,6.6,14.3,4.4
+Bliny ziemniaczane,dania,257,23.6,5.6,16.3
+Boćwina,dania,17,5.5,2.1,0.5
+Boeuf Strogonow,dania,220,3.7,19.5,14.3
+Bób,dania,66,14,7.1,0.4
+Brokuły,warzywa,27,5.2,3,0.4
+Brokuły mrożone,warzywa,24,4.7,2.7,0.4
+Brukselka,warzywa,37,8.7,4.7,0.5
+Brukselka mrożona,warzywa,36,8.4,4.5,0.5
+Brukselka z wody,warzywa,110,12,4.2,7.1
+Bryzol wołowy z polędwicy,dania,252,1.4,24.6,16.6
+Brzoskwinia,owoce,46,11.9,1,0.2
+Brzoskwinie w syropie,owoce,73,18.2,0.4,0.1
+Brzoskwinie. dżem niskosłodzony,owoce,155,38.3,0.5,0.1
+Buchty drożdżowe,pieczywo,303,45.6,6.2,11
+Budyń z mięsa i makaronu,dania,171,23.1,10.6,4.4
+Bułka tarta,pieczywo,347,77.6,9.7,1.9
+Bułki grahamki,pieczywo,258,56.9,8.2,1.7
+Bułki kajzerki,pieczywo,296,59.4,7.5,3.6
+Bułki maślane,pieczywo,326,61.8,7.7,5.9
+Bułki pszenne zwykłe,pieczywo,272,58.5,7.3,1.5
+Bułki wrocławskie,pieczywo,293,57.4,7.2,4.4
+Burak,warzywa,38,9.5,1.8,0.1
+Buraki mrożone. puree,warzywa,34,8.6,1.6,0.1
+Buraki z jabłkami,warzywa,69,10.3,1.5,3.3
+Buraki zasmażane,warzywa,83,8.7,1.6,5.5
+Buraki ze śmietaną,warzywa,68,8.8,1.8,3.6
+Cebula,warzywa,30,6.9,1.4,0.4
+Chałki,pieczywo,333,61.6,7,7
+Chipsy bekonowe,przekąski,537,52.2,5.9,38
+Chipsy paprykowe,przekąski,549,50.4,6,40
+Chipsy solone,przekąski,552,49.9,5.6,40.7
+Chleb baltonowski,pieczywo,246,55.9,5.9,1.5
+Chleb chrupki,pieczywo,353,78.9,8.7,2.4
+Chleb Graham,pieczywo,226,49.4,7.6,1.7
+Chleb mazowiecki,pieczywo,248,56.3,6.3,1.4
+Chleb mieszany słonecznikowy,pieczywo,246,49.2,6.4,4.5
+Chleb mieszany sojowy,pieczywo,231,49.6,6.8,2.7
+Chleb praski,pieczywo,244,56.2,5.7,1.3
+Chleb pszenny,pieczywo,249,56,6.8,1.4
+Chleb staropolski,pieczywo,219,50.5,5,1.7
+Chleb wiejski,pieczywo,239,55.1,5.8,1.3
+Chleb zwykły,pieczywo,245,57,5.4,1.3
+Chleb żytni jasny,pieczywo,241,57.1,4,1.3
+Chleb żytni jasny mleczny,pieczywo,253,58.3,4.8,1.8
+Chleb żytni pełnoziarnisty,pieczywo,237,53.9,6.7,1.8
+Chleb żytni razowy,pieczywo,223,51.5,5.6,1.7
+Chleb żytni razowy na miodzie,pieczywo,234,54.2,5.3,1.6
+Chleb żytni razowy z soją i słonecznikiem,pieczywo,244,50.5,7.9,3.7
+Chleb żytni wileński,pieczywo,225,52.3,4.4,1.5
+Chrupki kukurydziane,przekąski,352,78.9,8.9,3
+Chrzan,warzywa,67,18.1,4.5,0.6
+Ciastka francuskie ze śliwkami,słodycze,432,44.8,5,26.8
+Ciastka Karpatki,słodycze,449,39.1,4.7,30.9
+Ciastka Napoleonki,słodycze,348,43.6,5.9,17
+Ciastka tortowe z owoceami,słodycze,276,47.2,3.2,9
+Ciasto drożdżowe,słodycze,290,47.7,7.4,8.2
+Ciasto kruche podstawowe,słodycze,429,49.9,5.2,23.8
+Ciasto naleśnikowe bez piany,słodycze,174,28.4,5.9,4.3
+Ciasto naleśnikowe biszkoptowe,słodycze,187,25.5,8.3,6
+Cielęcina w potrawce,dania,103,4,13.5,4
+Cielęcina. łopatka,mięso,106,0,19.9,2.8
+Cielęcina. sznyclówka,mięso,105,0,20.5,2.4
+Cielęcina. udziec,mięso,108,0,19.9,3.1
+Coca Cola,napoje,42,10.4,0,0
+Cukier,słodycze,405,99.8,0,0
+Cukierki irysy,słodycze,421,76.1,4.3,10.7
+Cukierki krówki,słodycze,421,76.1,4.3,10.7
+Cukinia,warzywa,15,3.2,1.2,0.1
+Cykoria,warzywa,21,4.1,1.7,0.2
+Cytryna,owoce,36,9.5,0.8,0.3
+Czarne jagody,owoce,45,12.2,0.8,0.6
+Czarne porzeczki. dżem niskosłodzony,słodycze,152,39.6,0.5,0.1
+Czarne porzeczki. dżem wysokosłodzony,słodycze,251,63.9,0.5,0.1
+Czekolada biała,słodycze,530,51,7.7,38.4
+Czekolada deserowa,słodycze,531,64,5.3,28.9
+Czekolada gorzka,słodycze,554,56.6,6.7,34.3
+Czekolada kawowa,słodycze,526,62.7,5.5,29
+Czekolada mleczna,słodycze,549,54.7,9.8,32.8
+Czekolada mleczna z orzechami laskowymi,słodycze,539,57.3,8.6,30.9
+Czekolada nadziewana,słodycze,450,68.8,3.9,17.6
+Czereśnie,owoce,61,14.6,1,0.3
+Daktyle suszone,owoce,277,74,2,0.4
+Delicje szampańskie,słodycze,327,52.8,4.1,11.2
+Deser ryżowy jabłkowy,słodycze,134,23.9,2.8,3
+Deser ryżowy waniliowy,słodycze,133,23.5,3,2.9
+Deser twarogowy termizowany kakaowy,słodycze,156,11.2,13.9,6.2
+Deser twarogowy termizowany truskawkowy,słodycze,170,18.3,11,5.8
+Dorsz świeży,ryby,78,0,17.7,0.7
+Dorsz świeży. filety bez skóry,ryby,70,0,16.5,0.3
+Dorsz w jarzynach,ryby,117,3.9,15.6,4.9
+Dorsz wędzony,ryby,94,0,22.1,0.5
+Dorsz z rusztu,ryby,172,0.6,22.1,9.1
+Dorsz. filety po grecku,ryby,152,4.6,10.6,10.8
+Dorsz. filety smażone panierowane,ryby,273,14.6,19.1,15.8
+Dorsz. kotlet mielony,ryby,260,10.9,14.9,17.8
+Dorsz. pulpety,ryby,112,8.8,14.2,2.6
+Dorsz. sałatka,ryby,187,7.2,9.8,13.9
+Dynia,warzywa,28,7.7,1.3,0.3
+Dynia z pomidorami,warzywa,44,6.5,1.2,2.4
+Dynia. pestki,warzywa,556,18,24.5,45.8
+Eklerki z bitą śmietaną,słodycze,317,33.5,5.8,18
+Fasola biała. suche nasiona,warzywa,288,61.6,21.4,1.6
+Fasola cięta konserwowa,warzywa,16,4.5,1.5,0.2
+Fasola szparagowa,warzywa,27,7.6,2.4,0.2
+Fasolka flageolet konserwowa,warzywa,61,15,6.3,0.2
+Fasolka po bretońsku,warzywa,141,15.9,8,6.6
+Fasolka szparagowa,warzywa,97,10.3,2.9,6.9
+Fasolka szparagowa mrożona,warzywa,24,6.8,2.2,0.2
+Figi suszone,owoce,290,78,3.6,1.2
+Flaki,mięso,84,0,16,2.2
+Flądra świeża,ryby,83,0,16.5,1.8
+Galaretka z nóżek wieprzowych,dania,202,0.8,16.9,14.9
+Gęś. tuszka,mięso,339,0,14.1,31.8
+Gołąbki z mięsem i ryżem w sosie pomidorowym,dania,108,10,3.6,6.7
+Grejpfrut,owoce,36,9.8,0.6,0.2
+Groch. suche nasiona,warzywa,293,60.2,23.8,1.4
+Groszek zielony,warzywa,75,17,6.7,0.4
+Groszek zielony konserwowy,warzywa,63,15.8,4.9,0.2
+Groszek zielony mrożony,warzywa,72,16.3,6.4,0.4
+Groszek zielony z masłem,warzywa,100,9.3,3.7,6.8
+Gruszka,owoce,54,14.4,0.6,0.2
+Gruszki w sosie waniliowym,owoce,151,34.8,1.6,1.1
+Gulasz wołowy,dania,148,2.6,14,9.2
+Halibut biały świeży,ryby,98,0,20.1,1.9
+Herbatniki,słodycze,437,76.8,8.2,11
+Herbatniki Corso,słodycze,440,67.1,5,17.2
+Herbatniki kakaowe,słodycze,474,62.9,6.9,22.3
+Herbatniki kokosowe,słodycze,473,59.8,6.4,25.2
+Herbatniki sezamowe,słodycze,503,55.7,8.1,28.6
+Herbatniki w czekoladzie,słodycze,489,63.1,6.3,24
+Herbatniki z cukrem,słodycze,460,70.7,6.7,17.2
+Herbatniki z nadzieniem czekoladowym,słodycze,497,57.3,5.5,27.9
+Herbatniki z nadzieniem owoceowym,słodycze,389,58.6,3.8,16.1
+Herbatniki z nadzieniem owoceowym,słodycze,389,58.6,3.8,16.1
+Paluszki,przekąski,384,75.2,9.9,4.9
+Papaja,owoce,43,9.8,0.6,0.1
+Papryka czerwona,warzywa,35,6.9,1.2,0.3
+Papryka konserwowa,warzywa,37,5,0.8,1.5
+Paprykarz Szczeciński,warzywa,181,8.6,9.9,11.9
+Parówki dla dzieci Morlinki,mięso,223,0.4,12.4,19.1
+Parówki popularne,mięso,347,0,9.5,34.3
+Parówki z kurczaka,mięso,262,4.2,10.8,22.4
+Pasternak,mięso,80,18,1.2,0.3
+Pasztet popularny,mięso,405,2,13.2,38.2
+Pasztet z drobiu,mięso,270,4.4,9.6,23.8
+Pączki,słodycze,376,52,6,16
+Pepsi. Cola. napój,napoje,42,10.4,0,0
+Pestki dyni,przekąski,596,15,29,46.7
+Pędy bambusa,warzywa,34,5.2,2.6,0.3
+Pędy bambusa. konserwa. odsączone,warzywa,23,3.2,1.7,0.4
+Pieczarka suszona,warzywa,331,49.3,19.1,2.1
+Pieczarka świeża,warzywa,24,2.5,2.6,0.4
+Pieczywo chrupkie pszenne Wasa,pieczywo,360,73,12,2.2
+Pierogi leniwe mrożone,dania,157,30.2,7.3,0.8
+Pierogi ruskie mrożone,dania,215,37.9,7.2,3.8
+Pierogi z kapustą i grzybami mrożone,dania,209,34.5,5,5.7
+Pierogi z mięsem mrożone,dania,255,34.8,10.5,8.2
+Pierogi z serem mrożone,dania,198,36.4,10.9,1
+Pierogi z truskawkami mrożone,dania,194,42.4,4.3,0.8
+Piernik czekoladowy,słodycze,317,74.3,4.9,11.8
+Piersi bez skóry indycze,mięso,109,0,21.3,2.6
+Piersi bez skóry z kurczaka,mięso,100,0,21.5,1.3
+Piersi ze skórą z kurczaka,mięso,155,0,19.3,8.6
+Pietruszka korzeń,warzywa,83,17.1,2.6,0.5
+Pietruszka liście,warzywa,60,9,3.7,1
+Piwo bezalkoholowe,napoje,27,5.2,0.2,0
+Piwo ciemne pełne,napoje,42,4.6,0.4,0
+Piwo jasne mocne,napoje,64,5.4,7,0
+Piwo jasne pełne,napoje,49,3.8,0.5,0
+Pizza z pieczarkami i cebulą,dania,296,32.1,12,13.3
+Pizza z szynką,dania,223,40.2,9.8,2.5
+Płatki jęczmienne,płatki,389,79.4,9.8,3.6
+Płatki kukurydziane,płatki,385,83.6,6.9,2.5
+Płatki kukurydziane Nestle Corn Flakes,płatki,370,83.3,7.3,0.8
+Płatki owsiane,płatki,390,69.3,11.9,7.2
+Płatki pszenne,płatki,387,81,9,3
+Płatki żytnie,płatki,385,82.6,6.4,3.2
+Polędwica wołowa,mięso,112,0,20.1,3.5
+Pomidor,warzywa,29,5.2,0.9,0.5
+Por,warzywa,47,9.9,1.7,0.1
+Pomarańcza,owoce,51,11.3,0.9,0.2
+Popcorn bez tłuszczu,przekąski,397,77.9,12,4.2
+Popcorn z tłuszczem,przekąski,518,57.1,9,28.1
+Porzeczki białe,owoce,63,14.5,0.4,0.4
+Porzeczki czarne,owoce,84,17.4,1.5,0.9
+Porzeczki czerwone,owoce,64,13.8,1.3,0.4
+Powidła śliwkowe,słodycze,218,53,1,0.2
+Poziomki,owoce,41,8.3,0.8,0.5
+Precelki,przekąski,385,79.5,9.1,3.5
+Prince Polo. wafel,słodycze,534,57.5,4.8,31.5
+Princessa. wafel,słodycze,562,58.4,4.1,34.6
+Przyprawa do zup Maggi,przyprawy,17,1.5,2.7,0
+Pstrąg świeży,ryby,96,0,19.2,2.1
+Ptyś z bitą śmietaną. ciastko,słodycze,352,25.8,5.4,25.2
+Pyzy z mięsem mrożone,dania,169,26.2,5.2,4.9
+Pyzy ziemniaczane mrożone,dania,140,32.2,1.7,0.5
+Rabarabar,warzywa,18,3.8,0.5,0.1
+Raffaello. czekoladki,słodycze,600,35.4,9.7,46.6
+Rama Classic. margaryna,margaryna,631,0.2,0,70
+Red Bull. napój,napoje,45,11.3,0,0
+Rodzynki,owoce,298,71.2,2.3,0.5
+Rostbef wołowy,mięso,152,0,21.5,7.3
+Rozbratel wołowy,mięso,158,0,16.7,10.1
+Ryż biały,ryże,349,78.9,6.7,0.7
+Ryż brązowy,ryże,353,76.8,7.1,1.9
+Ryż dziki amerykański,ryże,351,73,13.8,0.4
+Ryż preparowany,ryże,376,84.1,6.3,1.6
+Rzeżucha,warzywa,15,1.3,2.3,0.1
+Rzodkiewka,warzywa,21,3.6,0.8,0.4
+Salceson czarny,mięso,340,0.5,12.6,32
+Salceson włoski,mięso,322,0,14.6,29.3
+Sałata,warzywa,20,2.9,1.4,0.3
+Sandacz świeży,ryby,80,0.9,18.3,0.3
+Sardynki w oleju. konserwa,ryby,202,0,24,11.5
+Sardynki w sosie pomidorowym. konserwa,ryby,163,1.4,17,9.9
+Sarnina,mięso,102,0.4,20.8,1.9
+Schab surowy wieprzowy,mięso,174,0,21,10
+Schab wędzony,mięso,136,0,25,4
+Seler korzeń,warzywa,61,13.6,1.3,0.2
+Ser Feta,nabiał,216,1,17,16
+Ser pleśniowy Brie pełnotłusty,nabiał,293,0,18,24.5
+Ser pleśniowy Rokpol pełnotłusty,nabiał,354,0,22.6,29.3
+Ser podpuszczkowy Brie pełnotłusty,nabiał,332,0.2,19.8,28
+Ser podpuszczkowy Camembert tłusty,nabiał,263,1.9,19.3,19.8
+Ser podpuszczkowy Cheddar pełnotłusty,nabiał,382,2.5,27.1,29.3
+Ser podpuszczkowy Ementaler pełnotłusty,nabiał,383,0.1,28.8,29.7
+Ser podpuszczkowy Ementaler tłusty,nabiał,330,1.5,28.8,23.2
+Ser podpuszczkowy Gouda tłusty,nabiał,314,1,27.9,22
+Ser podpuszczkowy Mozarella tłusty,nabiał,224,0,20,16
+Ser podpuszczkowy Myśliwski pełnotłusty,nabiał,349,0.1,25.5,27.4
+Ser podpuszczkowy Parmezan,nabiał,408,0.1,35.1,29.7
+Ser podpuszczkowy Salami pełnotłusty,nabiał,354,0.1,25.2,28.1
+Ser podpuszczkowy Salami tłusty,nabiał,329,3.1,29.5,22.1
+Ser podpuszczkowy Tylżycki pełnotłusty,nabiał,356,0.1,26.1,27.9
+Ser podpuszczkowy Tylżycki tłusty,nabiał,327,2.1,27.8,23
+Ser topiony tłusty,nabiał,222,1.6,18,16
+Ser twarogowy chudy,nabiał,98,3.5,19.8,0.5
+Ser twarogowy półtłusty,nabiał,132,3.7,18.7,4.7
+Ser twarogowy pełnotłusty,nabiał,176,3.5,17.7,10.1
+Serca wieprzowe,,111,0,16.9,4.8
+Serdelki drobiowe,,239,1.9,13.9,19.5
+Serek Fromage naturalny,nabiał,384,2.4,10.2,37.1
+Serek homogenizowany truskawkowy,nabiał,167,17.7,15.3,3.9
+Serek homogenizowany waniliowy,nabiał,158,13.3,16.8,4.2
+Serek twarogowy ziarnisty,nabiał,101,3.3,12.3,4.3
+Sernik,nabiał,273,38,10,9
+Sernik z rodzynkami. ciasto,nabiał,342,39.6,14.6,13.9
+Skrzydło bez skóry indycze,mięso,169,0,16.5,11.4
+Słonecznik ziarno,przekąski,580,12.3,22.5,49
+Sok ananasowy,napoje,48,11.4,0.3,0.1
+Sok grejfrutowy,napoje,35,7.8,0.6,0.2
+Sok jabłkowy,napoje,45,10,0.4,0.4
+Sok marchwiowy,napoje,48,11.3,0.4,0.1
+Sok pomarańczowy,napoje,45,10.5,0.5,0.1
+Sok pomidorowy,napoje,19,2.6,0.8,0.6
+Sok z czarnej porzeczki,napoje,45,10.2,0.3,0.3
+Sprite. napój,napoje,42,10.5,0,0
+Syrop truskawkowy,napoje,262,62,0.2,0.1
+Szampan półsłodki,napoje,97,7,0.2,0
+Ziemniaki późne,warzywa,85,20.5,1.9,0.1
+Ziemniaki puree,warzywa,90,18.4,2.1,1.4
+Ziemniaki wczesne,warzywa,69,16.3,1.8,0.1
+Ziemniaki z tłuszczem,warzywa,106,18.7,2,3.1
+Zupa cebulowa,zupy,44,4,1.4,2.7
+Zupa cytrynowa z ryżem,zupy,58,8.7,1.4,2.2
+Zupa fasolowa,zupy,62,10,4,1.8
+Zupa grochowa,zupy,66,8.9,4.4,2.4
+Zupa grzybowa zabielana,zupy,26,1.3,1.3,1.8
+Zupa jarzynowa,zupy,43,6.2,1.7,1.8
+Zupa jesienna mrożona,zupy,27,7.2,1.6,0.2
+Zupa kalafiorowa,zupy,28,4.9,1.6,0.5
+Zupa kalafiorowa mrożona,zupy,22,5.5,2,0.2
+Zupa neapolitańska,zupy,63,8.2,2.2,2.6
+Zupa ogórkowa,zupy,42,5,1.4,2
+Zupa owoceowa z jabłek,zupy,42,11.8,0.1,0.1
+Zupa pomidorowa,zupy,11,2.1,1,0.1
+Zupa pomidorowa z makaronem,zupy,35,3.3,1.5,1.8
+Zupa pomidorowa z ryżem,zupy,37,3.9,1.5,1.8
+Zupa pomidorowa zabielana,zupy,28,1.9,1.3,1.8
+Zupa selerowa,zupy,37,4.5,1.6,1.8
+Zupa selerowa z grzankami,zupy,51,8.1,1.8,1.9
+Zupa szczawiowa,zupy,40,2.9,1.6,2.5
+Zupa szpinakowa z ziemniakami,zupy,40,6.6,2.2,0.9
+Zupa włoska mrożona,zupy,27,6.9,1.8,0.3
+Zupa z fasoli szparagowej,zupy,43,8.9,2.2,0.6
+Zupa z porów z makaronem,zupy,58,10.3,2.4,1.4
+Zupa z zielonego groszku,zupy,56,11.2,3.2,1.2
+Zupa ziemniaczana,zupy,39,6.6,1.4,1.1
+Zupa zimowa mrożona,zupy,25,6.9,2.1,0.3
+Żeberka wieprzowe duszone,dania,210,2.2,7.9,19.2
+Żółtko jaja kurzego,jajka,314,0.3,15.5,28.2
+Żurek,zupy,124,23.5,2.2,3.1

@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.kamil.treningsapp.Models.AppUserData;
 import com.example.kamil.treningsapp.DBHelper;
@@ -19,6 +20,8 @@ import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -77,11 +80,18 @@ public class ShowCalcNutri extends Fragment {
         View view = inflater.inflate(R.layout.fragment_show_calc_nutri, container, false);
         DBHelper dbHelper = new DBHelper(getActivity());
         AppUserData user = dbHelper.getUser(1);
-
+        TextView tbxEnergy = (TextView) view.findViewById(R.id.tbxEnergy_Value);
+        TextView tbxfat = (TextView) view.findViewById(R.id.tbxFat_Value);
+        TextView tbxprotein = (TextView) view.findViewById(R.id.tbxProtein_Value);
+        TextView tbxcarbo = (TextView) view.findViewById(R.id.tbxCarbo_Value);
         int protein = user.getProtein();
         int fat = user.getFat();
         int carbo = user.getCarbo();
         int kcal = user.getEnergy();
+        tbxEnergy.setText("Kalorie:" + Integer.toString(kcal));
+        tbxfat.setText("Tłuszcze:" + Integer.toString(kcal));
+        tbxprotein.setText("Białko:" + Integer.toString(kcal));
+        tbxcarbo.setText("Węglowodany:" + Integer.toString(kcal));
         pieChart = (PieChart) view.findViewById(R.id.idPieChart);
         pieChart.setDescription("Zapotrzebowanie ");
         pieChart.setRotationEnabled(false);
@@ -99,6 +109,7 @@ public class ShowCalcNutri extends Fragment {
         yData = nutries;
 
         addDataSet();
+        getContext().getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("firstrun",false).commit();
         return view;
     }
 

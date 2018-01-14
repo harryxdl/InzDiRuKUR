@@ -2,6 +2,7 @@ package com.example.kamil.treningsapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -12,6 +13,12 @@ import com.example.kamil.treningsapp.Models.MealData;
 import com.example.kamil.treningsapp.Models.MeasureData;
 import com.example.kamil.treningsapp.Models.TreningData;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,10 +31,9 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper{
 
     private final SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-
     public static final String DATABASE_NAME = "MyDBName.db";
 
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 14;
 
     public static final String TRENING_TABLE_NAME = "trenings";
     public static final String TRENING_COLUMN_ID = "id";
@@ -73,9 +79,11 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String BODY_COLUMN_WAIST = "waist";
     public static final String BODY_COLUMN_CHEST = "chest";
     public static final String BODY_COLUMN_DATE = "date_measure";
+    private Context mCtx;
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME,null, DATABASE_VERSION);
+        mCtx = context;
     }
 
     @Override
@@ -135,7 +143,10 @@ public class DBHelper extends SQLiteOpenHelper{
                         BODY_COLUMN_DATE + " date" +
                         ")"
         );
+        //addProducts();
     }
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -301,9 +312,9 @@ public class DBHelper extends SQLiteOpenHelper{
                 food.setiId(Integer.parseInt(cursor.getString(0)));
                 food.setName(cursor.getString(1));
                 food.setTag(cursor.getString(2));
-                food.setProtein(Integer.parseInt(cursor.getString(3)));
-                food.setCarbo(Integer.parseInt(cursor.getString(4)));
-                food.setFat(Integer.parseInt(cursor.getString(5)));
+                food.setProtein(Double.parseDouble(cursor.getString(3)));
+                food.setCarbo(Double.parseDouble(cursor.getString(4)));
+                food.setFat(Double.parseDouble(cursor.getString(5)));
                 food.setEnergy(Integer.parseInt(cursor.getString(6)));
                 foodList.add(food);
 
@@ -321,9 +332,9 @@ public class DBHelper extends SQLiteOpenHelper{
                 food.setiId(Integer.parseInt(cursor.getString(0)));
                 food.setName(cursor.getString(1));
                 food.setTag(cursor.getString(2));
-                food.setProtein(Integer.parseInt(cursor.getString(3)));
-                food.setCarbo(Integer.parseInt(cursor.getString(4)));
-                food.setFat(Integer.parseInt(cursor.getString(5)));
+                food.setProtein(Double.parseDouble(cursor.getString(3)));
+                food.setCarbo(Double.parseDouble(cursor.getString(4)));
+                food.setFat(Double.parseDouble(cursor.getString(5)));
                 food.setEnergy(Integer.parseInt(cursor.getString(6)));
 
             } while (cursor.moveToNext());
@@ -460,5 +471,30 @@ public class DBHelper extends SQLiteOpenHelper{
             } while (cursor.moveToNext());
         }
         return measureList;
+    }
+    public void addProducts() {
+        InputStream products = null; //<-- call getAssets on your Context object.
+        try {
+            products = mCtx.getAssets().open("products.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        InputStreamReader input = new InputStreamReader(products);
+        BufferedReader buffreader = new BufferedReader(input,2*1024);
+        String line;
+        try {
+            while ((line = buffreader.readLine()) != null) {
+                String[] point_t = line.split(",");
+                FoodData food = new FoodData(point_t[0],point_t[1],Integer.parseInt(point_t[2]),Double.parseDouble(point_t[3]),Double.parseDouble(point_t[4]),Double.parseDouble(point_t[5]));
+                addFood(food);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            products.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
