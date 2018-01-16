@@ -13,6 +13,7 @@ public class TreningData implements Parcelable {
     Date dateStart;
     Date dateEnd;
     int iDistacne;
+    int kcal;
 
 
     public TreningData(){
@@ -30,6 +31,22 @@ public class TreningData implements Parcelable {
         this.dateEnd = dateEnd;
         this.iDistacne = iDistacne;
     }
+
+    public TreningData(int iId, Date dateStart, Date dateEnd, int iDistacne, int kcal) {
+        this.iId = iId;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+        this.iDistacne = iDistacne;
+        this.kcal = kcal;
+    }
+
+    public TreningData(Date dateStart, Date dateEnd, int iDistacne, int kcal) {
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+        this.iDistacne = iDistacne;
+        this.kcal = kcal;
+    }
+
     public int getiId() {
         return iId;
     }
@@ -73,9 +90,11 @@ public class TreningData implements Parcelable {
         dest.writeLong(this.dateStart != null ? this.dateStart.getTime() : -1);
         dest.writeLong(this.dateEnd != null ? this.dateEnd.getTime() : -1);
         dest.writeInt(this.iDistacne);
+        dest.writeInt(this.kcal);
     }
     protected TreningData(Parcel in) {
         this.iId = in.readInt();
+        this.kcal = in.readInt();
         long tmp_date_start = in.readLong();
         this.dateStart = tmp_date_start == -1 ? null : new Date(tmp_date_start);
         long tmp_date_end = in.readLong();
@@ -94,4 +113,12 @@ public class TreningData implements Parcelable {
             return new TreningData[size];
         }
     };
+
+    public int getKcal() {
+        return kcal;
+    }
+
+    public void setKcal(int kcal) {
+        this.kcal = kcal;
+    }
 }

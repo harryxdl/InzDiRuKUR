@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.kamil.treningsapp.DBHelper;
+import com.example.kamil.treningsapp.Models.AppUserData;
 import com.example.kamil.treningsapp.Models.TreningData;
 import com.example.kamil.treningsapp.R;
 import com.google.android.gms.common.ConnectionResult;
@@ -43,7 +44,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     double dz=12756.274;
     double a,b, result = 0,lon1=0,lon2,lat1=0,lat2;
     private TextView metry;
+    private TextView kalorie;
     int wynik = 0;
+    double kcal;
     Date datestart = new Date();
     private GoogleMap mMap;
     GoogleApiClient mGoogleApiClient;
@@ -54,6 +57,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     TextView timerTextView;
     long startTime=0;
     DBHelper db = new DBHelper(this);
+    AppUserData user = db.getUser(1);
+    double weight = user.getWeight();
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
         @Override
@@ -82,6 +87,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         timerTextView = (TextView) findViewById(R.id.timerTextView);
+
 
         Button b = (Button) findViewById(R.id.timerbutton);
         b.setText("start");
@@ -202,7 +208,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
         metry = (TextView) findViewById(R.id.MyTextView);
-        String text = getApplicationContext().getString(R.string.meters)+wynik;
+        kalorie = (TextView) findViewById(R.id.txtBurnedKcal);
+        (double)kcal = weight*wynik /1000;
+        String text = "Pokonane metry: "+wynik;
         metry.setText(text);
 
 

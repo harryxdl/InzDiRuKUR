@@ -103,11 +103,11 @@ public class MeasureListAdapter extends BaseAdapter {
             holder.thighPro.setText(Double.toString(measureList.get(position).getThigh()-measureList.get(position+1).getThigh()) + " cm");
         }
         else{
-            holder.weightPro.setText(":)");
-            holder.bicepsPro.setText(":)");
-            holder.waistPro.setText(":)");
-            holder.chestPro.setText(":)");
-            holder.thighPro.setText(":)");
+            holder.weightPro.setText(":-)");
+            holder.bicepsPro.setText(":-)");
+            holder.waistPro.setText(":-)");
+            holder.chestPro.setText(":-)");
+            holder.thighPro.setText(":-)");
         }
 
         // Listen for ListView Item Click

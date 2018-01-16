@@ -491,4 +491,12 @@ public class DBHelper extends SQLiteOpenHelper{
             e.printStackTrace();
         }
     }
+
+    public void deleteMeasure(MeasureData measure) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(BODY_TABLE_NAME, BODY_COLUMN_ID + " = ?",
+                new String[]{String.valueOf(measure.getiId())});
+        db.close();
+    }
+
 }

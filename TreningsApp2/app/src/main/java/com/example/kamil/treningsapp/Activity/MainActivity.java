@@ -19,6 +19,7 @@ import com.example.kamil.treningsapp.Framgents.CalcNutriValueActivity;
 import com.example.kamil.treningsapp.Framgents.HistoryFragment;
 import com.example.kamil.treningsapp.Framgents.MeasureFragment;
 import com.example.kamil.treningsapp.Framgents.PlanDietManagerFragment;
+import com.example.kamil.treningsapp.Models.MeasureData;
 import com.example.kamil.treningsapp.Models.TreningData;
 import com.example.kamil.treningsapp.R;
 
@@ -147,9 +148,12 @@ public class MainActivity extends AppCompatActivity
     public void deleteTrening(TreningData treningData) {
         dbHelper.deleeContact(treningData);
     }
-
+    public void deleteMeasure (MeasureData measure) {dbHelper.deleteMeasure(measure);}
     public List<TreningData> getAllTrenings(){
         return dbHelper.getAllTrenings();
+    }
+    public List<MeasureData> getAllMeasure(){
+        return dbHelper.getAllMeasureList();
     }
 
 
