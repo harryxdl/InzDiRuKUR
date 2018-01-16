@@ -447,7 +447,7 @@ public class DBHelper extends SQLiteOpenHelper{
     }
     public List<MeasureData> getAllMeasureList() {
         List<MeasureData> measureList = new ArrayList<MeasureData>();
-        String selectQuery = "SELECT  * FROM " + BODY_TABLE_NAME;
+        String selectQuery = "SELECT  * FROM " + BODY_TABLE_NAME + " order by date_measure DESC";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -473,25 +473,19 @@ public class DBHelper extends SQLiteOpenHelper{
         return measureList;
     }
     public void addProducts() {
-        InputStream products = null; //<-- call getAssets on your Context object.
+        InputStream products = null;
         try {
             products = mCtx.getAssets().open("products.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        InputStreamReader input = new InputStreamReader(products);
-        BufferedReader buffreader = new BufferedReader(input,2*1024);
-        String line;
-        try {
+            InputStreamReader input = new InputStreamReader(products);
+            BufferedReader buffreader = new BufferedReader(input, 2 * 1024);
+            String line;
             while ((line = buffreader.readLine()) != null) {
                 String[] point_t = line.split(",");
-                FoodData food = new FoodData(point_t[0],point_t[1],Integer.parseInt(point_t[2]),Double.parseDouble(point_t[3]),Double.parseDouble(point_t[4]),Double.parseDouble(point_t[5]));
+                FoodData food = new FoodData(point_t[0], point_t[1], Integer.parseInt(point_t[2]),
+                                    Double.parseDouble(point_t[3]), Double.parseDouble(point_t[4]),
+                                    Double.parseDouble(point_t[5]));
                 addFood(food);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             products.close();
         } catch (IOException e) {
             e.printStackTrace();

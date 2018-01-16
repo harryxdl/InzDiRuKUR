@@ -16,6 +16,6 @@ android:layout_height="fill_parent" >
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="false"
         android:layout_alignParentTop="false"
-        android:text="Add Measure" />
+        android:text="Dodaj pomiar" />
 
 </RelativeLayout>

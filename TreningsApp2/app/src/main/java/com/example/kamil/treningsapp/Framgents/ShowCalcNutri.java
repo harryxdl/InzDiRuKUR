@@ -89,16 +89,16 @@ public class ShowCalcNutri extends Fragment {
         int carbo = user.getCarbo();
         int kcal = user.getEnergy();
         tbxEnergy.setText("Kalorie:" + Integer.toString(kcal));
-        tbxfat.setText("Tłuszcze:" + Integer.toString(kcal));
-        tbxprotein.setText("Białko:" + Integer.toString(kcal));
-        tbxcarbo.setText("Węglowodany:" + Integer.toString(kcal));
+        tbxfat.setText("Tłuszcze:" + Integer.toString(fat));
+        tbxprotein.setText("Białko:" + Integer.toString(protein));
+        tbxcarbo.setText("Węglowodany:" + Integer.toString(carbo));
         pieChart = (PieChart) view.findViewById(R.id.idPieChart);
-        pieChart.setDescription("Zapotrzebowanie ");
+        pieChart.setDescription("");
         pieChart.setRotationEnabled(false);
         //pieChart.setUsePercentValues(true);
         //pieChart.setHoleColor(Color.BLUE);
         //pieChart.setCenterTextColor(Color.BLACK);
-        pieChart.setHoleRadius(20f);
+        pieChart.setHoleRadius(23f);
         pieChart.setTransparentCircleAlpha(0);
         //pieChart.setCenterText("Zapotrzebowanie na Wartośći odżywcze");
         pieChart.setCenterTextSize(10);
@@ -109,7 +109,9 @@ public class ShowCalcNutri extends Fragment {
         yData = nutries;
 
         addDataSet();
+
         getContext().getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("firstrun",false).commit();
+
         return view;
     }
 
@@ -132,9 +134,9 @@ public class ShowCalcNutri extends Fragment {
 
         //add colors to dataset
         ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.MAGENTA);
-        colors.add(Color.CYAN);
-        colors.add(Color.RED);
+        colors.add(Color.rgb(153,204,255));
+        colors.add(Color.rgb(153,255,204));
+        colors.add(Color.rgb(204,155,255));
 
         pieDataSet.setColors(colors);
 

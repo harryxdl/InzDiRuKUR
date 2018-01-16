@@ -41,7 +41,11 @@ public class MeasureListAdapter extends BaseAdapter {
         TextView waist;
         TextView chest;
         TextView date;
-
+        TextView weightPro;
+        TextView bicepsPro;
+        TextView thighPro;
+        TextView waistPro;
+        TextView chestPro;
     }
 
     @Override
@@ -67,23 +71,45 @@ public class MeasureListAdapter extends BaseAdapter {
             // Locate the TextViews in listview_item.xml
            // holder.id = (TextView) view.findViewById(R.id.tbmeasure);
             holder.weight = (TextView) view.findViewById(R.id.tbMeasureWeight);
+            holder.weightPro = (TextView) view.findViewById(R.id.progres1);
             holder.biceps = (TextView) view.findViewById(R.id.tbMeasureBiceps);
+            holder.bicepsPro = (TextView) view.findViewById(R.id.progres4);
             holder.thigh = (TextView) view.findViewById(R.id.tbMeasureThigh);
+            holder.thighPro = (TextView) view.findViewById(R.id.progres5);
             holder.waist = (TextView) view.findViewById(R.id.tbMeasureWaist);
+            holder.waistPro = (TextView) view.findViewById(R.id.progres2);
             holder.chest = (TextView) view.findViewById(R.id.tbMeasureChest);
+            holder.chestPro = (TextView) view.findViewById(R.id.progres3);
             holder.date = (TextView) view.findViewById(R.id.tbDate_measure);
+
             view.setTag(holder);
         } else {
             holder = (MeasureListAdapter.ViewHolder) view.getTag();
         }
         // Set the results into TextViews
        // holder.id.setText(Integer.toString(measureList.get(position).getiId()));
-        holder.weight.setText(Double.toString(measureList.get(position).getWeight()));
-        holder.biceps.setText(Double.toString(measureList.get(position).getBiceps()));
-        holder.thigh.setText(Double.toString(measureList.get(position).getThigh()));
-        holder.waist.setText(Double.toString(measureList.get(position).getWaist()));
-        holder.chest.setText(Double.toString(measureList.get(position).getChest()));
-        holder.date.setText("Data Start:\n"+timeFormat.format(measureList.get(position).getDate()));
+        holder.weight.setText("Waga:                         " + Double.toString(measureList.get(position).getWeight()) + " kg");
+        holder.biceps.setText("Biceps:                       " + Double.toString(measureList.get(position).getBiceps()) + " cm");
+        holder.thigh.setText("Udo:                            " + Double.toString(measureList.get(position).getThigh()) + " cm");
+        holder.waist.setText("Talia:                          " + Double.toString(measureList.get(position).getWaist()) + " cm");
+        holder.chest.setText("Klatka piersiowa:    " + Double.toString(measureList.get(position).getChest())+ " cm");
+        holder.date.setText("Data mierzenia:       "+timeFormat.format(measureList.get(position).getDate()));
+
+        if(!measureList.get(position).equals(measureList.get(measureList.size() - 1))){
+            holder.weightPro.setText(Double.toString(measureList.get(position).getWeight()-measureList.get(position+1).getWeight()) + " kg");
+            holder.bicepsPro.setText(Double.toString(measureList.get(position).getBiceps()-measureList.get(position+1).getBiceps()) + " cm");
+            holder.waistPro.setText(Double.toString(measureList.get(position).getWaist()-measureList.get(position+1).getWaist()) + " cm");
+            holder.chestPro.setText(Double.toString(measureList.get(position).getChest()-measureList.get(position+1).getChest()) + " cm");
+            holder.thighPro.setText(Double.toString(measureList.get(position).getThigh()-measureList.get(position+1).getThigh()) + " cm");
+        }
+        else{
+            holder.weightPro.setText(":)");
+            holder.bicepsPro.setText(":)");
+            holder.waistPro.setText(":)");
+            holder.chestPro.setText(":)");
+            holder.thighPro.setText(":)");
+        }
+
         // Listen for ListView Item Click
 //        view.setOnClickListener(new View.OnClickListener() {
 //

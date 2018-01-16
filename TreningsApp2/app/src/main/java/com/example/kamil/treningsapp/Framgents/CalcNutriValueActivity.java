@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.kamil.treningsapp.Models.AppUserData;
 import com.example.kamil.treningsapp.DBHelper;
@@ -33,11 +35,13 @@ public class CalcNutriValueActivity extends Fragment implements View.OnClickList
     DBHelper dbHelper ;
     Bundle bundle ;
     private Boolean edit;
+    private boolean fielsdOk;
     private double exercise = 1.0, expectation = 0.8;
     private int protein, carbo, fat, kcal, weight, hight, age;
     private float[] yData ;
     private String[] xData = {"Białko", "Węglowodany" , "Tłuszcze" };
     PieChart pieChart;
+    View.OnFocusChangeListener validator;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,8 +67,65 @@ public class CalcNutriValueActivity extends Fragment implements View.OnClickList
         tbHeight = (EditText) view.findViewById(R.id.tbxHeight);
         tbWeight = (EditText) view.findViewById(R.id.tbxWeight);
         tbAge = (EditText) view.findViewById(R.id.tbxAge);
+
         chboxFemale = (RadioButton) view.findViewById(R.id.chboxFemale);
-        //////////////////////////////////////////////////////
+        tbAge.setError(null);
+        tbHeight.setError(null);
+        tbWeight.setError(null);
+        fielsdOk  = false;
+
+        validator = new View.OnFocusChangeListener(){
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (tbAge.getText().toString().isEmpty() || tbHeight.getText().toString().isEmpty() ||
+                                                            tbWeight.getText().toString().isEmpty()) {
+                    fielsdOk = false;
+                }
+                else {
+                    if (Integer.parseInt(tbAge.getText().toString()) <= 0 || tbAge.getText().length() < 1) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Popraw dane", Toast.LENGTH_SHORT).show();
+                        fielsdOk = false;
+                        return;
+                    }
+                    else
+                        fielsdOk = true;
+                    if (Integer.parseInt(tbHeight.getText().toString()) <= 0 || tbHeight.getText().length() < 1) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Popraw dane", Toast.LENGTH_SHORT).show();
+                        fielsdOk = false;
+                        return;
+                    }
+                    else
+                        fielsdOk = true;
+                    if (Integer.parseInt(tbWeight.getText().toString()) <= 0 || tbWeight.getText().length() < 1){
+                        Toast.makeText(getActivity().getApplicationContext(), "Popraw dane", Toast.LENGTH_SHORT).show();
+                        fielsdOk = false;
+                        return;
+                    }
+                    else
+                        fielsdOk = true;
+                }
+            }
+        };
+
+
+
+
+
+//        tbHeight.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (Integer.parseInt(tbHeight.getText().toString()) <= 0 || tbHeight.getText().length() < 1 )
+//                    tbHeight.setError("Popraw dane");
+//            }
+//        });
+//        tbWeight.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (Integer.parseInt(tbWeight.getText().toString()) <= 0 || tbWeight.getText().length() < 1 )
+//                    tbWeight.setError("Popraw dane");
+//            }
+//        });
+            //////////////////////////////////////////////////////
         // Spinners
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),R.array.sportActivity, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),R.array.expectation, android.R.layout.simple_spinner_item);
@@ -134,8 +195,13 @@ public class CalcNutriValueActivity extends Fragment implements View.OnClickList
     @Override
     public void onClick(View v) {
 
+        tbAge.setOnFocusChangeListener(validator);
+        tbHeight.setOnFocusChangeListener(validator);
+        tbWeight.setOnFocusChangeListener(validator);
+
         switch (v.getId()){
             case R.id.btnCalculate:
+                if (fielsdOk)
                 Calculate();
               //  Intent intent = new Intent()
         }
