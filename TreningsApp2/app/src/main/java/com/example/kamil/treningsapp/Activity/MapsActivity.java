@@ -45,10 +45,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     double a,b, result = 0,lon1=0,lon2,lat1=0,lat2;
     private TextView metry;
     private TextView kalorie;
+    private boolean treningStart = false;
     int wynik = 0;
     double kcal;
     Date datestart = new Date();
     private GoogleMap mMap;
+
+    double weight;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
@@ -57,8 +60,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     TextView timerTextView;
     long startTime=0;
     DBHelper db = new DBHelper(this);
-    AppUserData user = db.getUser(1);
-    double weight = user.getWeight();
+
+
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
         @Override
@@ -76,7 +79,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
+        AppUserData user = db.getUser(1);
+        weight = user.getWeight();
         //  metry = (TextView) findViewById(R.id.MyTextView);
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -96,11 +100,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Button b = (Button) v;
+
+                treningStart = true;
                 if (b.getText().equals("stop")) {
                     timerHandler.removeCallbacks(timerRunnable);
                     b.setText("start");
                     Date dateEnd = new Date();
-                    db.addTrening(new TreningData(datestart, dateEnd, wynik));
+                    db.addTrening(new TreningData(datestart, dateEnd, wynik, (int)kcal));
                     //Intent intent = new Intent(this, MainActivity.class);
 
                     finish();
@@ -108,6 +114,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
                     b.setText("stop");
+                    wynik = 0;
+                    kcal = 0;
 
                 }
             }
@@ -209,10 +217,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         metry = (TextView) findViewById(R.id.MyTextView);
         kalorie = (TextView) findViewById(R.id.txtBurnedKcal);
-        (double)kcal = weight*wynik /1000;
-        String text = "Pokonane metry: "+wynik;
-        metry.setText(text);
-
+        kcal = weight*wynik /1000;
+        if(treningStart) {
+            String text = "Pokonane metry: " + wynik;
+            kalorie.setText("Spalone kalorie:" + kcal);
+            metry.setText(text);
+        }
 
 
 

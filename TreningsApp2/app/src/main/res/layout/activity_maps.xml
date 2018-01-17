@@ -14,12 +14,11 @@
         tools:context=".Activity.MapsActivity" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/MyTextView"
         android:layout_width="273dp"
         android:layout_height="100px"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="350dp"
-        android:text="@string/meters"
         android:textColor="#000000"
         android:textSize="25dp" />
 
@@ -52,7 +51,6 @@
         android:layout_height="100px"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="400dp"
-        android:text="Spalone Kalorie:"
         android:textColor="#000000"
         android:textSize="25dp" />
 

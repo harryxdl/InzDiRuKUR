@@ -165,6 +165,7 @@ public class DBHelper extends SQLiteOpenHelper{
         values.put(TRENING_COLUMN_DATE_START, timeFormat.format(trening.getDateStart())); // Contact Name
         values.put(TRENING_COLUMN_DATE_END, timeFormat.format(trening.getDateEnd())); // Contact Phone Number
         values.put(TRENING_COLUMN_DISTANCE, trening.getiDistacne());
+        values.put(TRENING_COLUMN_KCAL, trening.getKcal());
 
         // Inserting Row
         db.insert(TRENING_TABLE_NAME, null, values);
