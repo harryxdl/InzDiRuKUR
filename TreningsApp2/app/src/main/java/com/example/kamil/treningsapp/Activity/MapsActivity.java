@@ -46,7 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private TextView metry;
     private TextView kalorie;
     private boolean treningStart = false;
-    int wynik = 0;
+    double doubleResult = 0;
     double kcal;
     Date datestart = new Date();
     private GoogleMap mMap;
@@ -81,6 +81,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_maps);
         AppUserData user = db.getUser(1);
         weight = user.getWeight();
+        metry = (TextView) findViewById(R.id.MyTextView);
+        kalorie = (TextView) findViewById(R.id.txtBurnedKcal);
         //  metry = (TextView) findViewById(R.id.MyTextView);
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -106,7 +108,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     timerHandler.removeCallbacks(timerRunnable);
                     b.setText("start");
                     Date dateEnd = new Date();
-                    db.addTrening(new TreningData(datestart, dateEnd, wynik, (int)kcal));
+                    db.addTrening(new TreningData(datestart, dateEnd, (int)result, (int)kcal));
                     //Intent intent = new Intent(this, MainActivity.class);
 
                     finish();
@@ -114,7 +116,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
                     b.setText("stop");
-                    wynik = 0;
+                    result = 0;
                     kcal = 0;
 
                 }
@@ -185,65 +187,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onLocationChanged(Location location) {
-
-        mLastLocation = location;
-        if (mCurrLocationMarker != null) {
-            mCurrLocationMarker.remove();
-        }
-//double a,b,result,lon1,lon2,lat1,lat2;
-        //Place current location marker
-
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        if(lat1==0&&lon1==0){
-            lat1=location.getLatitude();
-            lon1=location.getLongitude();
-        }
-        PolylineOptions rectOptions = new PolylineOptions().geodesic(true).color(Color.BLUE).width(5);
-        rectOptions.add(new LatLng(lat1,lon1));
-        if(lat2!=location.getLatitude()||lon2!=location.getLongitude()){
-            lat2=location.getLatitude();
-            lon2=location.getLongitude();
-
-            if(lat2 > (lat1 + 0.000001) || lat2 < (lat1 - 0.000001) || lon2 > (lon1 + 0.000001) || lon2 < (lon1 - 0.000001) ) {
-                a = (lon2 - lon1) * Math.cos(lat1 * Math.PI / 180);
-                b = (lat2 - lat1);
-                result = result + (Math.sqrt(a * a + b * b) * Math.PI * dz / 360) * 1000;// m
-                wynik = (int) result;
-                lat1 = lat2;
-                lon1 = lon2;
-                LocationList.add(location);
-                drawPrimaryLinePath(LocationList);
-            }
-        }
-        metry = (TextView) findViewById(R.id.MyTextView);
-        kalorie = (TextView) findViewById(R.id.txtBurnedKcal);
-        kcal = weight*wynik /1000;
         if(treningStart) {
-            String text = "Pokonane metry: " + wynik;
+            if (lat1 == 0 && lon1 == 0) {
+                lat1 = location.getLatitude();
+                lon1 = location.getLongitude();
+            }
+            if (lat2 != location.getLatitude() || lon2 != location.getLongitude()) {
+                lat2 = location.getLatitude();
+                lon2 = location.getLongitude();
+                if (lat2 > (lat1 + 0.000001) || lat2 < (lat1 - 0.000001) ||
+                    lon2 > (lon1 + 0.000001) || lon2 < (lon1 - 0.000001)) {
+                    result += haversineDistance(lon1, lon2, lat1, lat2);
+                    lat1 = lat2;
+                    lon1 = lon2;
+                    LocationList.add(location);
+                    drawPrimaryLinePath(LocationList);
+                }
+            }
+            kcal = weight * (int) result / 1000;
             kalorie.setText("Spalone kalorie:" + kcal);
-            metry.setText(text);
+            metry.setText("Pokonane metry: " + (int) result);
         }
-
-
-
-        //MarkerOptions markerOptions = new MarkerOptions();
-        //markerOptions.position(latLng);
-       // markerOptions.title("Current Position");
-       // markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        //mCurrLocationMarker = mMap.addMarker(markerOptions);
-
-        Polyline polyline = mMap.addPolyline(rectOptions);
-        //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(18));
-
-        /*if(endsession)
-        {
-            if (mGoogleApiClient != null)
-            {
-                LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-            }
-        }*/
     }
     @Override
     public void onPause() {
@@ -348,6 +315,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         mMap.addPolyline( options );
-
+//        double x = getDistance(5,3,3,3);
     }
+
+   private double haversineDistance(double lon1, double lon2, double lat1, double lat2){
+        double dLat = (lat2 - lat1)*Math.PI/180;
+        double dLon = (lon2 - lon1)*Math.PI/180;
+        double r = 6378.137; // promień równikowa
+        double a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180)
+                * Math.sin(dLon/2) * Math.sin(dLon/2);
+        double result = 2 * Math.asin(Math.sqrt(a)) * r * 1000 ; // wynik w metrach
+        return result;
+    }
+
 }
