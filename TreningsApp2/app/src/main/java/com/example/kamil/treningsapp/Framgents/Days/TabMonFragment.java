@@ -84,7 +84,6 @@ public class TabMonFragment extends Fragment {
         setTxt();
         listAdapter = new ExpandableListAdapter(getActivity(),listDataHeader,listHash, DAY);
         listView.setAdapter(listAdapter);
-
         return view;
     }
 

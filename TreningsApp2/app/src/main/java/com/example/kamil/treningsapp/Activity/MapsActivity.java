@@ -193,17 +193,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 lat1 = location.getLatitude();
                 lon1 = location.getLongitude();
             }
-            if (lat2 != location.getLatitude() || lon2 != location.getLongitude()) {
-                lat2 = location.getLatitude();
-                lon2 = location.getLongitude();
-                if (lat2 > (lat1 + 0.000001) || lat2 < (lat1 - 0.000001) ||
-                    lon2 > (lon1 + 0.000001) || lon2 < (lon1 - 0.000001)) {
-                    result += haversineDistance(lon1, lon2, lat1, lat2);
-                    lat1 = lat2;
-                    lon1 = lon2;
-                    LocationList.add(location);
-                    drawPrimaryLinePath(LocationList);
-                }
+            lat2 = location.getLatitude();
+            lon2 = location.getLongitude();
+            if (lat2 > (lat1 + 0.00001) || lat2 < (lat1 - 0.00001) ||
+                lon2 > (lon1 + 0.00001) || lon2 < (lon1 - 0.00001)) {
+                result += haversineFormula(lon1, lon2, lat1, lat2);
+                lat1 = lat2;
+                lon1 = lon2;
+                LocationList.add(location);
+                drawPrimaryLinePath(LocationList);
             }
             kcal = weight * (int) result / 1000;
             kalorie.setText("Spalone kalorie:" + kcal);
@@ -211,7 +209,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(18));
-    }
+    }//
+    //53.134756, 23.185833
+    //53.134762, 23.185686
     @Override
     public void onPause() {
         super.onPause();
@@ -318,7 +318,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        double x = getDistance(5,3,3,3);
     }
 
-   private double haversineDistance(double lon1, double lon2, double lat1, double lat2){
+   private double haversineFormula(double lon1, double lon2, double lat1, double lat2){
         double dLat = (lat2 - lat1)*Math.PI/180;
         double dLon = (lon2 - lon1)*Math.PI/180;
         double r = 6378.137; // promień równikowa

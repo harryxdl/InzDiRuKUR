@@ -93,6 +93,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     intent.putExtra("mealName", headerTitle);
 
                     ((Activity) context).startActivityForResult(intent, 10001);
+                    notifyDataSetChanged();
                 }
             });
         }
@@ -134,6 +135,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     intent.putExtra("day", day);
                     intent.putExtra("mealName", headerTitle);
                     ((Activity) context).startActivityForResult(intent, 10001);
+                    notifyDataSetChanged();
                 }
             });
         }
