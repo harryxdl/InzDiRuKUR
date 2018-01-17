@@ -3,12 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-
-
 
 
         <TextView
@@ -24,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/foodName"
             android:layout_toRightOf="@+id/foodCalLabel3" />
+
         <TextView
             android:id="@+id/foodProteinLabel3"
             android:layout_width="wrap_content"
@@ -37,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/foodCal3"
             android:layout_toRightOf="@+id/foodProteinLabel3" />
+
         <TextView
             android:id="@+id/foodCarboLabel3"
             android:layout_width="wrap_content"
@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/foodProteinLabel3"
             android:layout_toRightOf="@+id/foodCarboLabel3" />
+
         <TextView
             android:id="@+id/foodFatLabel3"
             android:layout_width="wrap_content"
@@ -69,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/foodFat3"
-            android:text="@string/foodLeft" />
+            android:text="Potrzebne kalorie: " />
 
         <TextView
             android:id="@+id/foodLeftCalFat3"

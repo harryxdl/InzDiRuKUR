@@ -22,6 +22,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import static java.lang.Math.round;
+
 
 public class TabFriFragment extends Fragment {
 
@@ -76,10 +78,9 @@ public class TabFriFragment extends Fragment {
 
     private void setTxt() {
         holder.cal.setText(Integer.toString(cal));
-        holder.protein.setText(Double.toString(protein));
-        holder.carbo.setText(Double.toString(carbo));
-        holder.fat.setText(Double.toString(fat));
-
+        holder.protein.setText(Double.toString(round(protein)));
+        holder.carbo.setText(Double.toString(round(carbo)));
+        holder.fat.setText(Double.toString(round(fat)));
     }
 
 
