@@ -96,6 +96,7 @@ public class TabMonFragment extends Fragment {
         listAdapter = null;
         listAdapter = new ExpandableListAdapter(getActivity(),listDataHeader,listHash, DAY);
         listView.setAdapter(listAdapter);
+        setTxt();
         //getFragmentManager().beginTransaction().detach(this).attach(this).commit();
     }
 
