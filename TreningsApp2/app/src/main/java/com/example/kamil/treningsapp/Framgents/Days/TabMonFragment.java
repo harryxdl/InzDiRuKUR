@@ -89,6 +89,16 @@ public class TabMonFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        initData();
+        listAdapter = null;
+        listAdapter = new ExpandableListAdapter(getActivity(),listDataHeader,listHash, DAY);
+        listView.setAdapter(listAdapter);
+        //getFragmentManager().beginTransaction().detach(this).attach(this).commit();
+    }
+
     private void setTxt() {
         holder.cal.setText(Integer.toString(cal));
         holder.protein.setText(Double.toString(round(protein)));

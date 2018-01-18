@@ -35,14 +35,14 @@ public class MeasureFragment extends Fragment {
     public MeasureFragment() {
         // Required empty public constructor
     }
-
+    DBHelper db;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_measure, container, false);
-        DBHelper db = new DBHelper(getActivity());
+        db = new DBHelper(getActivity());
         list = (ListView) view.findViewById(R.id.lstMeasure);
         btn = (Button) view.findViewById(R.id.btnMeasureFragment);
         measureList = db.getAllMeasureList();
@@ -95,5 +95,11 @@ public class MeasureFragment extends Fragment {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        measureList = db.getAllMeasureList();
+        adapter = new MeasureListAdapter(getActivity(), measureList);
+        list.setAdapter(adapter);
+    }
 }

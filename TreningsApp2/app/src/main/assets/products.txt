@@ -267,8 +267,8 @@ Ser topiony tłusty,nabiał,222,1.6,18,16
 Ser twarogowy chudy,nabiał,98,3.5,19.8,0.5
 Ser twarogowy półtłusty,nabiał,132,3.7,18.7,4.7
 Ser twarogowy pełnotłusty,nabiał,176,3.5,17.7,10.1
-Serca wieprzowe,,111,0,16.9,4.8
-Serdelki drobiowe,,239,1.9,13.9,19.5
+Serca wieprzowe,mięso,111,0,16.9,4.8
+Serdelki drobiowe,mięso,239,1.9,13.9,19.5
 Serek Fromage naturalny,nabiał,384,2.4,10.2,37.1
 Serek homogenizowany truskawkowy,nabiał,167,17.7,15.3,3.9
 Serek homogenizowany waniliowy,nabiał,158,13.3,16.8,4.2

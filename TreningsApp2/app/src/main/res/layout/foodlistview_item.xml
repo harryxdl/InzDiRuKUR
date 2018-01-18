@@ -2,19 +2,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
+    <TextView
+        android:id="@+id/foodtagLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodIdlabel"
+        android:text="Kategoria: " />
 
+    <TextView
+        android:id="@+id/foodTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodId"
+        android:layout_toRightOf="@+id/foodtagLabel" />
     <TextView
         android:id="@+id/foodNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/foodIdlabel"
+        android:layout_below="@+id/foodtagLabel"
         android:text="@string/foodName" />
 
     <TextView
         android:id="@+id/foodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/foodId"
+        android:layout_below="@+id/foodTag"
         android:layout_toRightOf="@+id/foodNameLabel" />
 
     <TextView
@@ -43,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/foodCal"
         android:layout_toRightOf="@+id/foodProteinLabel" />
+
     <TextView
         android:id="@+id/foodCarboLabel"
         android:layout_width="wrap_content"

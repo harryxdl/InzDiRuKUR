@@ -134,5 +134,13 @@ public class TabTueFragment extends Fragment {
             }
         }
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        initData();
+        listAdapter = null;
+        listAdapter = new ExpandableListAdapter(getActivity(),listDataHeader,listHash, DAY);
+        listView.setAdapter(listAdapter);
+        //getFragmentManager().beginTransaction().detach(this).attach(this).commit();
+    }
 }

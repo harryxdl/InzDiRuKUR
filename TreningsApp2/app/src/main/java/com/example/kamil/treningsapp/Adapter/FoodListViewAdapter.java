@@ -55,6 +55,7 @@ public class FoodListViewAdapter extends BaseAdapter {
     public class ViewHolder {
         TextView id;
         TextView name;
+        TextView tag;
         TextView cal;
         TextView carbo;
         TextView fat;
@@ -85,6 +86,7 @@ public class FoodListViewAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.foodlistview_item, null);
             // Locate the TextViews in listview_item.xml
            //holder.id = (TextView) view.findViewById(R.id.foodId);
+            holder.tag = (TextView) view.findViewById(R.id.foodTag) ;
             holder.name = (TextView) view.findViewById(R.id.foodName);
             holder.cal = (TextView) view.findViewById(R.id.foodCal);
             holder.protein = (TextView) view.findViewById(R.id.foodProtein);
@@ -96,6 +98,7 @@ public class FoodListViewAdapter extends BaseAdapter {
         }
         // Set the results into TextViews
         //holder.id.setText(Integer.toString(foodList.get(position).getiId()));
+        holder.tag.setText(foodList.get(position).getTag());
         holder.name.setText(foodList.get(position).getName());
         holder.cal.setText(Integer.toString(foodList.get(position).getEnergy()));
         holder.protein.setText(Double.toString(foodList.get(position).getProtein()));
