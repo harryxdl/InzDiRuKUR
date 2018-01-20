@@ -8,14 +8,33 @@ android:layout_height="fill_parent" >
         android:layout_height="fill_parent"
         android:layout_below="@+id/search" />
 
-    <Button
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/btnMeasureFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:cardBackgroundColor="#EF5350"
+        android:layout_marginRight="5dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="false"
         android:layout_alignParentTop="false"
-        android:text="Dodaj pomiar" />
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Dodaj pomiar"
+            android:textColor="#ffffff"
+            android:textSize="16dp"/>
+
+
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>

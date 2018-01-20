@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ import static android.content.Context.MODE_PRIVATE;
 public class CalcNutriValueActivity extends Fragment implements View.OnClickListener{
 
     private Spinner spinner, spinner2;
-    private Button btnCalc;
+    private CardView btnCalc;
     private RadioButton chboxFemale;
     private AppUserData user = new AppUserData();
     private static String TAG = "MainActivity";
@@ -63,7 +64,7 @@ public class CalcNutriValueActivity extends Fragment implements View.OnClickList
             edit = false;
         spinner = (Spinner) view.findViewById(R.id.spinner);
         spinner2 = (Spinner) view.findViewById(R.id.spinner2);
-        btnCalc = (Button) view.findViewById(R.id.btnCalculate);
+        btnCalc = (CardView) view.findViewById(R.id.btnCalculate);
         tbHeight = (EditText) view.findViewById(R.id.tbxHeight);
         tbWeight = (EditText) view.findViewById(R.id.tbxWeight);
         tbAge = (EditText) view.findViewById(R.id.tbxAge);

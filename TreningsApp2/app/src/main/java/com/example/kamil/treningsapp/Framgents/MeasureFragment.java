@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,7 @@ public class MeasureFragment extends Fragment {
     MeasureListAdapter adapter;
     ListView list;
     private List<MeasureData> measureList;
-    Button btn;
+    CardView btn;
     public MeasureFragment() {
         // Required empty public constructor
     }
@@ -44,7 +45,7 @@ public class MeasureFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_measure, container, false);
         db = new DBHelper(getActivity());
         list = (ListView) view.findViewById(R.id.lstMeasure);
-        btn = (Button) view.findViewById(R.id.btnMeasureFragment);
+        btn = (CardView) view.findViewById(R.id.btnMeasureFragment);
         measureList = db.getAllMeasureList();
         adapter = new MeasureListAdapter(getActivity(), measureList);
         list.setAdapter(adapter);

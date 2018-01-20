@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,12 +76,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
         final String headerTitle = (String)getGroup(i);
-        Button btn;
+        CardView btn;
         if(view == null)
         {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.list_group,null);
-            btn = (Button) view.findViewById(R.id.AddMealFood);
+            btn = (CardView) view.findViewById(R.id.AddMealFood);
             if(getChildrenCount(i)>0) {
                 btn.setVisibility(View.GONE);
             }

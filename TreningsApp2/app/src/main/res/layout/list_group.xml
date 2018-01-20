@@ -18,12 +18,27 @@
 
     </TextView>
 
-    <Button
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/AddMealFood"
         android:layout_width="wrap_content"
-        android:layout_height="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        app:cardElevation="6dp"
         android:layout_gravity="right|end"
-        android:text="Dodaj produkt"
-        android:visibility="visible" />
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:text="Dodaj produkt"/>
+
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

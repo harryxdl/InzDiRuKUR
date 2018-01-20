@@ -2,6 +2,7 @@ package com.example.kamil.treningsapp.Framgents;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +15,7 @@ import java.util.Date;
 
 public class AddMeasure extends AppCompatActivity {
     private EditText tbWeight, tbBiceps, tbThigh, tbWaist, tbChest;
-    private Button btn;
+    private CardView btn;
     private MeasureData measure;
     private double weight, biceps, thigh, waist, chest;
     private Date date;
@@ -32,7 +33,7 @@ public class AddMeasure extends AppCompatActivity {
         tbThigh = (EditText) findViewById(R.id.tbAddThigh);
         tbWaist = (EditText) findViewById(R.id.tbAddWaist);
         tbChest = (EditText) findViewById(R.id.tbAddChest);
-        btn = (Button) findViewById(R.id.btnAddMeasure);
+        btn = (CardView) findViewById(R.id.btnAddMeasure);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 

@@ -1,88 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
-
-        <TextView
-            android:id="@+id/foodCalLabel3"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btnMeasureFragment"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/foodNameLabel"
-            android:text="@string/foodCal" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="10dp">
 
-        <TextView
-            android:id="@+id/foodCal3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodName"
-            android:layout_toRightOf="@+id/foodCalLabel3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/foodProteinLabel3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodCalLabel3"
-            android:text="@string/foodProtein" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/foodProtein3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodCal3"
-            android:layout_toRightOf="@+id/foodProteinLabel3" />
+                    <TextView
+                        android:id="@+id/foodCalLabel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodNameLabel"
+                        android:text="@string/foodCal"
+                        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/foodCarboLabel3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodProtein3"
-            android:text="@string/foodCarbo" />
+                    <TextView
+                        android:id="@+id/foodCal3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodName"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/foodCalLabel3"
+                        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/foodCarbo3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodProteinLabel3"
-            android:layout_toRightOf="@+id/foodCarboLabel3" />
+                </LinearLayout>
 
-        <TextView
-            android:id="@+id/foodFatLabel3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodCarboLabel3"
-            android:text="@string/foodFat" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/foodFat3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodCarbo3"
-            android:layout_toRightOf="@+id/foodFatLabel3" />
+                    <TextView
+                        android:id="@+id/foodProteinLabel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodCalLabel3"
+                        android:text="@string/foodProtein"
+                        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/foodLeftCalLabel3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodFat3"
-            android:text="Potrzebne kalorie: " />
+                    <TextView
+                        android:id="@+id/foodProtein3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodCal3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/foodProteinLabel3"
+                        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/foodLeftCalFat3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/foodFat3"
-            android:layout_toRightOf="@+id/foodLeftCalLabel3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/foodCarboLabel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodProtein3"
+                        android:text="@string/foodCarbo"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/foodCarbo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodProteinLabel3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/foodCarboLabel3"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/foodFatLabel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodCarboLabel3"
+                        android:text="@string/foodFat"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/foodFat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodCarbo3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/foodFatLabel3"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/foodLeftCalLabel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodFat3"
+                        android:text="Potrzebne kalorie: "
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/foodLeftCalFat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/foodFat3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/foodLeftCalLabel3"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
     </RelativeLayout>
 
     <ExpandableListView
+        android:id="@+id/lvlExpMon"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id = "@+id/lvlExpMon">
-    </ExpandableListView>
+        android:layout_height="match_parent"></ExpandableListView>
 </LinearLayout>
