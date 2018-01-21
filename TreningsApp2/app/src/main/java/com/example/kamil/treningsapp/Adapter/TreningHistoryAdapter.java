@@ -58,10 +58,10 @@ public class TreningHistoryAdapter extends ArrayAdapter<TreningData> {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.dataStart.setText("Data Start:\n"+timeFormat.format(treningDataList.get(position).getDateStart()));
-        holder.dataEnd.setText("Data End:\n"+timeFormat.format(treningDataList.get(position).getDateEnd()));
-        holder.distance.setText("Distance:\n "+ String.valueOf(treningDataList.get(position).getiDistacne())+ "m.");
-        holder.time.setText("Time:\n "+timerFormat.format(treningDataList.get(position).getDateEnd().getTime()-treningDataList.get(position).getDateStart().getTime()));
+        holder.dataStart.setText("Data rozpoczęcia: \n"+timeFormat.format(treningDataList.get(position).getDateStart()));
+        holder.dataEnd.setText("Data zakończenia: \n"+timeFormat.format(treningDataList.get(position).getDateEnd()));
+        holder.distance.setText("Dystans: \n "+ String.valueOf(treningDataList.get(position).getiDistacne())+ "m.");
+        holder.time.setText("Czas: \n "+timerFormat.format(treningDataList.get(position).getDateEnd().getTime()-treningDataList.get(position).getDateStart().getTime()));
         return convertView;
     }
 
