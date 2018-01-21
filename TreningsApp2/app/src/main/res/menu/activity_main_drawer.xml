@@ -4,11 +4,11 @@
     <group android:id="@+id/menu_group" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_calc"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_send"
             android:title="Oblicz Zapotrzebowanie Kaloryczne" />
         <item
             android:id="@+id/nav_measure"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_storage_black_24dp"
             android:title="Pomiar Ciała" />
         <item
             android:title="Treningi Biegowe">
@@ -34,7 +34,7 @@
                     android:title="Planuj dietę" />
                 <item
                     android:id="@+id/nav_product"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/ic_storage_black_24dp"
                     android:title="Przegląd produktów" />
             </group>
         </menu>
